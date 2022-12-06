@@ -7,20 +7,24 @@ import { customTheme } from '../../utils/style/variables'
 export const ContainerBg = styled(Container)`
     background-image: url(${BgHome}); 
     background-repeat: no-repeat; 
-    height: 42vw; 
+    background-size: cover;
+    height:100%; 
+    padding:2%
 `
 
 export const ContentForm = styled(Container)`
     display: flex;
     flex-direction : column; 
     width: 33%; 
-    margin: 0 auto; 
     background-color: white; 
     position: relative;
-    top: 40px;
+    top: 0px;
     left: 0%;
     padding: 1%; 
     border-radius: 10px; 
+    @media (min-width: 425px) and (max-width: 980px) {
+        width: 50%; 
+      }
 `
 export const ButtonSubmit = styled.button`
 background-color : ${customTheme.colors.primary500}; 

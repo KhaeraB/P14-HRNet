@@ -32,7 +32,7 @@ export const ContentNavBar = styled(Container)`
   background-color: ${customTheme.colors.primary500};
   padding: 10px;
    &>*{
-      margin:5px; 
+      margin:2%; 
       text-decoration: none; 
     
       color: ${customTheme.colors.neutral200}; 
@@ -49,9 +49,8 @@ export const ContentFooter = styled(Container)`
   background-color: ${customTheme.colors.primary500};
   padding: 12px;
    &>*{
-      margin:1.07%; 
+      margin:1%; 
       text-decoration: none; 
-    
       color: ${customTheme.colors.neutral200}; 
          &:hover{
             color: ${customTheme.colors.neutral100}; 
