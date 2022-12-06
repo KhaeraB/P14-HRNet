@@ -1,17 +1,19 @@
 import { AddEmployee } from '../Form/AddEmployee'
-import { ContentForm, ContainerBg, ButtonSubmit, TitleForm } from './index.styles'
+import { ContentForm, ContainerBg, ButtonSubmit, TitleForm, Main } from './index.styles'
 
 
 const Home = () => {
   const content = (
-    <ContainerBg fluid={true}>
-      <ContentForm>
-        <TitleForm>Create Employee</TitleForm>
-        <AddEmployee />
-        <ButtonSubmit className='mt-2 btn' >Save</ButtonSubmit>
-      </ContentForm>
-      <div id="confirmation" class="modal">Employee Created!</div>
-    </ContainerBg>
+    <Main>
+      <ContainerBg fluid={true}>
+        <ContentForm>
+          <TitleForm>Create Employee</TitleForm>
+          <AddEmployee />
+          <ButtonSubmit className='mt-2 btn' >Save</ButtonSubmit>
+        </ContentForm>
+        <div id="confirmation" class="modal">Employee Created!</div>
+      </ContainerBg>
+    </Main>
   )
   return content
 }

@@ -32,7 +32,7 @@ export const ContentNavBar = styled(Container)`
   background-color: ${customTheme.colors.primary500};
   padding: 10px;
    &>*{
-      margin:2%; 
+      margin:9px; 
       text-decoration: none; 
     
       color: ${customTheme.colors.neutral200}; 
