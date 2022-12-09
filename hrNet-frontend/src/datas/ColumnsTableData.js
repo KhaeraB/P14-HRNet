@@ -73,12 +73,5 @@ export const columns = [
         sorter: (a, b) =>  a.zipcode.localeCompare(b.zipcode),
         ellipsis: true,
     },
-    // {
-    //     'title': 'Action',
-    //     'dataIndex': '',
-    //     'key': 'X',
-    //     width: '4rem',
-    //     align:'center',
-    //     render: () => <a>X</a>,
-    // },
+  
 ];
