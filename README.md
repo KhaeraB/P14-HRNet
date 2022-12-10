@@ -62,8 +62,7 @@ npm run dev
 
 # Stop local dev server
 ctrl +c x2
-# Populate database with two users
-npm run populate-db
+
 ```
 
 Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
