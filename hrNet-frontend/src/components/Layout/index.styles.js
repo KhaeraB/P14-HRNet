@@ -4,7 +4,7 @@ import { customTheme } from '../../utils/style/variables'
 import { Container } from 'react-bootstrap'
 
 export const LogoImg = styled.img`
-  width: 15%;
+  width: 100%;
   height:15%; 
 `
 export const LogoImgFooter = styled.img`
@@ -16,6 +16,12 @@ export const TitleLogo = styled.div`
   flex-direction: row; 
   justify-content: flex-start; 
   align-items:center;
+  a{
+   width: 40%; 
+   text-decoration: none; 
+   display: flex; 
+   align-items: center; 
+  }
   h1{
    color: ${customTheme.colors.neutral200}; 
    font-weight: lighter; 

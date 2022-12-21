@@ -11,7 +11,7 @@ const Home = () => {
           <AddEmployee />
           <ButtonSubmit className='mt-2 btn' >Save</ButtonSubmit>
         </ContentForm>
-        <div id="confirmation" class="modal">Employee Created!</div>
+        <div id="confirmation" className="modal">Employee Created!</div>
       </ContainerBg>
     </Main>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-import { NavLink } from 'react-bootstrap'
+import { Link, Outlet } from 'react-router-dom'
+
 
 import { LogoImg, ContentNavBar, TitleLogo, ContentFooter, LogoImgFooter, TitleFooter } from './index.styles'
 import Logo from '../../assets/logo.png'
@@ -9,10 +9,12 @@ export const Header = () => {
   const content = (
     <ContentNavBar fluid={true} className="p-0">
       <TitleLogo>
-        <LogoImg src={Logo} alt="Hrnet" href="/" />
+         <Link to="/">
+          <LogoImg src={Logo} alt="Hrnet" href="/" />
         <h1>HrNet</h1>
+        </Link>
       </TitleLogo>
-      <NavLink to="employees">View Current Employees</NavLink>
+      <Link to="/employees">View Current Employees</Link>
     </ContentNavBar>
   )
   return content
