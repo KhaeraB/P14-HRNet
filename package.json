@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/KhaeraB/P14-HRNet/issues"
   },
-  "homepage": "https://github.com/KhaeraB/P14-HRNet#readme", 
+  "homepage": "https://github.com/KhaeraB/P14-HRNet#readme",
   "dependencies": {
     "concurrently": "^7.5.0"
   }

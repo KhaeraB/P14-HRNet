@@ -17,7 +17,7 @@ export const TitleLogo = styled.div`
   justify-content: flex-start; 
   align-items:center;
   a{
-   width: 40%; 
+   width: 18%; 
    text-decoration: none; 
    display: flex; 
    align-items: center; 

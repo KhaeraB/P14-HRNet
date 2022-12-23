@@ -1,13 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BASE_URL = "http://localhost:3001/api/employees";
+const BASE_URL = "http://localhost:3001/";
 
 // Create an async thunk for fetching data from the database
 export const fetchData = createAsyncThunk(
   BASE_URL,
   async () => {
-    const response = await axios.get('/api/data');
+    const response = await axios.get('/api/employees');
     return response.data;
   }
 );
@@ -16,7 +16,7 @@ export const fetchData = createAsyncThunk(
 export const createData = createAsyncThunk(
  BASE_URL,
   async (data) => {
-    const response = await axios.post('/api/data', data);
+    const response = await axios.post('/api/employees', data);
     return response.data;
   }
 );
@@ -25,7 +25,7 @@ export const createData = createAsyncThunk(
 export const updateData = createAsyncThunk(
   BASE_URL,
   async (data) => {
-    const response = await axios.put(`/api/data/${data.id}`, data);
+    const response = await axios.put(`/api/employees/${data.id}`, data);
     return response.data;
   }
 );
@@ -34,7 +34,7 @@ export const updateData = createAsyncThunk(
 export const deleteData = createAsyncThunk(
   BASE_URL,
   async (id) => {
-    await axios.delete(`/api/data/${id}`);
+    await axios.delete(`/api/employees/${id}`);
     return id;
   }
 );

@@ -16,6 +16,7 @@ export const employeesApiSlice = apiSlice.injectEndpoints({
       transformResponse: (responseData) => {
         const loadedUsers = responseData.map((employee) => {
           employee.id = employee._id;
+          // console.log(employee)
           return employee;
         });
         return employeesAdapter.setAll(initialState, loadedUsers);
@@ -27,15 +28,53 @@ export const employeesApiSlice = apiSlice.injectEndpoints({
             ...result.ids.map((id) => ({ type: "employees", id })),
           ];
         } else return [{ type: "Employees", id: "LIST" }];
-      },
+      }
+    }),
+    addNewEmployee: builder.mutation({
+      query: (initialEmployeeData) => ({
+        url: "/api/employees",
+        method: "POST",
+        body: {
+          ...initialEmployeeData,
+        },
+      }),
+      invalidatesTags: [{ type: "Employees", id: "LIST" }],
+    }),
+    updateEmployee: builder.mutation({
+      query: (initialEmployeeData) => ({
+        url: "/api/employees",
+        method: "PATCH",
+        body: {
+          ...initialEmployeeData,
+        },
+      }),
+      invalidatesTags: (result, error, arg) => [
+        { type: "Employees", id: arg.id },
+      ],
+    }),
+    deleteEmployee: builder.mutation({
+      query: ({ id }) => ({
+        url: `/api/employees`,
+        method: "DELETE",
+        body: { id },
+      }),
+      invalidatesTags: (result, error, arg) => [
+        { type: "Employees", id: arg.id },
+      ],
     }),
   }),
 });
 
-export const { useGetEmployeesQuery } = employeesApiSlice;
+export const {
+  useGetEmployeesQuery,
+  useAddNewEmployeeMutation,
+  useUpdateEmployeeMutation,
+  useDeleteEmployeeMutation,
+} = employeesApiSlice;
 
 // returns the query result object
-export const selectEmployeesResult = employeesApiSlice.endpoints.getEmployees.select();
+export const selectEmployeesResult =
+  employeesApiSlice.endpoints.getEmployees.select();
 
 // creates memoized selector
 const selectEmployeesData = createSelector(
