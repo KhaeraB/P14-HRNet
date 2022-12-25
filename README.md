@@ -50,12 +50,12 @@ $ git submodule update
 
 ```bash
 # with NPM
-cd front-end && npm install && cd..    
-cd backend && npm i && cd..     
+cd hrNet-frontend && npm install && cd..    
+cd hrNet-backend && npm i && cd..     
 
 # with YARN
-cd front-end && yarn && cd..    
-cd backend && yarn && cd..   
+cd hrNet-frontend && yarn && cd..    
+cd hrNet-backend && yarn && cd..   
 
 # Start local dev server
 npm run dev
