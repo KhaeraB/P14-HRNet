@@ -1,4 +1,4 @@
-# P13_ArgentBank API
+# P14_HrNet 
 
 - ![Author](<https://img.shields.io/badge/Author-Khaera Belkadi-">)
 - ![GitHub repo size](<https://img.shields.io/github/repo-size/KhaeraB/P14-HRNet>)  
@@ -12,7 +12,7 @@ This codebase contains the code needed to run the backend for Argent Bank.
 
 ### Prerequisites
 
-Argent Bank uses the following tech stack:
+Hr Net uses the following tech stack:
 
 - [Node.js v12](https://nodejs.org/en/)
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
