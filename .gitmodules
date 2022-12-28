@@ -1,6 +1,6 @@
-[submodule "api-backend"]
+[submodule "hrNet-backend"]
 	path = hrNet-backend 
 	url = https://github.com/KhaeraB/P14-HrNet-BackEnd
-[submodule "old-frontend"]
+[submodule "projet_jQuery"]
 	path = projet_jQuery
 	url = https://github.com/KhaeraB/P14_Front-end_HRNet
