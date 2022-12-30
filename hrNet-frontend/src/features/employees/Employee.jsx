@@ -6,7 +6,8 @@ import { columns } from '../../datas/ColumnsTableData'
 import { selectAllEmployees, useGetEmployeesQuery} from './employeesApiSlice'
 
 const Employee = ({ ids }) => {
-    const [filterTable, setFilterTable] = useState(null);
+    document.title = "Wealth Health - Employees List";
+    const [filterData, setFilterData] = useState(null);
     const data= useSelector(state => selectAllEmployees(state, ids))
     
     const {
@@ -20,10 +21,10 @@ const Employee = ({ ids }) => {
              */
      
         const onInputSearch = (value) => {
-            const filterData = data.filter((employee) => Object.keys(employee).some((k) => String(employee[k])
+            const filterEmployee = data.filter((employee) => Object.keys(employee).some((k) => String(employee[k])
                 .toLowerCase()
                 .includes(value.toLowerCase())));
-            setFilterTable(filterData);
+            setFilterData(filterEmployee);
         };
         return ( <>
             <FormItem style={{display:'flex', justifyContent: 'flex-end', alignItems:'center', margin:'50px 20px 32px 25px'}}>
@@ -35,13 +36,11 @@ const Employee = ({ ids }) => {
                     
                 />
             </FormItem>
-
-            <div style={{margin: 20}}> 
                 <ConfigProvider renderEmpty={() => isLoading ? <Spin style={{height:'1rem'}} size="large" tip="Be patient, datas are coming !"/>:<Empty description="An error occures with database" style={{fontSize:'20px', color:'red'}}/> } style={{height:'5rem'}}>
                     <Table 
                         columns={columns}
                         rowKey={(employee) => employee.id}
-                        dataSource={filterTable == null ? data : filterTable} 
+                        dataSource={filterData == null ? data : filterData} 
                         size='middle' 
                         pagination={{
                             style:{marginTop:'30px'},
@@ -50,15 +49,14 @@ const Employee = ({ ids }) => {
                             showSizeChanger:true,
                             size: 'small',
                             position: ['bottomCenter'],
-                            showTotal: (total, range) => (
-                                `Showing ${range[0]} to ${range[1]} of ${total} entries`
+                            showAllData: (pages, range) => (
+                                `Showing ${range[0]} to ${range[1]} of ${pages} entries`
                             )
                         }} 
                         scroll={{y: 500}} 
                     >
                     </Table>
                 </ConfigProvider> 
-            </div>
         </>
         
     );
