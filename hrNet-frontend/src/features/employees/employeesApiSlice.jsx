@@ -14,12 +14,12 @@ export const employeesApiSlice = apiSlice.injectEndpoints({
       },
       keepUnusedDataFor: 5,
       transformResponse: (responseData) => {
-        const loadedUsers = responseData.map((employee) => {
+        const loadedEmployees = responseData.map((employee) => {
           employee.id = employee._id;
           // console.log(employee)
           return employee;
         });
-        return employeesAdapter.setAll(initialState, loadedUsers);
+        return employeesAdapter.setAll(initialState, loadedEmployees);
       },
       providesTags: (result, error, arg) => {
         if (result?.ids) {

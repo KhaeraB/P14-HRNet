@@ -16,6 +16,12 @@ export const Main= styled.main`
 
 export const ContainerBg = styled(Container)`
    padding: 3%; 
+   @media (min-width: 375px) and (max-width: 425px) {
+    padding: 5% 0%;
+}
+   @media (min-width: 425px)and (max-width: 980px) {
+   padding: 12.7% 0%;
+   }
 `
 
 export const ContentForm = styled(Container)`
@@ -28,8 +34,11 @@ export const ContentForm = styled(Container)`
     left: 0%;
     padding: 1%; 
     border-radius: 10px; 
+    @media (min-width: 375px) and (max-width: 425px) {
+        width: 100%; 
+    }
         @media (min-width: 425px) and (max-width: 980px) {
-            width: 50%; 
+            width: 60%; 
         }
 `
 export const ButtonSubmit = styled.button`

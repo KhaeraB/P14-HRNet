@@ -43,7 +43,7 @@ export const ContentNavBar = styled(Container)`
     
       color: ${customTheme.colors.neutral200}; 
          &:hover{
-            color: ${customTheme.colors.neutral100}; 
+            color: ${customTheme.colors.neutral200}; 
          }
    }
 `

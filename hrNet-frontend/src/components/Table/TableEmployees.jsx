@@ -2,10 +2,11 @@ import { Table, Input, Spin, Empty, ConfigProvider} from 'antd';
 import FormItem from 'antd/es/form/FormItem';
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { columns } from '../../datas/ColumnsTableData'
-import { selectAllEmployees, useGetEmployeesQuery} from './employeesApiSlice'
+import { columns } from '../../config/ColumnsTableData'
+import { selectAllEmployees, useGetEmployeesQuery } from '../../features/employees/employeesApiSlice';
 
-const Employee = ({ ids }) => {
+
+const TableEmployees = ({ ids }) => {
     document.title = "Wealth Health - Employees List";
     const [filterData, setFilterData] = useState(null);
     const data= useSelector(state => selectAllEmployees(state, ids))
@@ -14,7 +15,6 @@ const Employee = ({ ids }) => {
         isLoading,
       } = useGetEmployeesQuery();
 
-    console.log(data)
        
         /**
              * global search
@@ -61,4 +61,4 @@ const Employee = ({ ids }) => {
         
     );
 }
-export default Employee
+export default TableEmployees
