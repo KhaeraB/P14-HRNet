@@ -329,3 +329,33 @@ template {
 [hidden] {
   display: none;
 }
+
+.form__input--incomplete {
+  border: 1px solid var(--INPUT-INVALID);
+  outline: 1px solid var(--INPUT-INVALID);
+}
+
+.errmsg {
+  display: inline-block;
+  background-color: var(--TABLE-BGCOLOR);
+  color: var(--ERROR);
+  padding: 0.25em;
+  margin-bottom: 0.5em;
+}
+.offscreen{
+  border: none;
+}
+
+/* Hidden placeholder */
+select option[disabled]:first-child {
+	display: none;
+}
+select option {
+	color: black;
+}
+select option:first-child {
+	color: grey;
+}
+select.empty {
+	color: grey;
+}

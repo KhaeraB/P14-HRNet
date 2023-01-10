@@ -5,13 +5,15 @@ const OptionsStates= ({ids}) => {
 
     const statesData = useSelector((state) => selectAllStates(state, ids))
     const option = statesData.map((state) => {
+      // console.log(state.abbreviation)
         return (
-          <option key={state.id} value={state.id}>
+          <option value={state.abbreviation} key={state.abbreviation}>
             {' '}
             {state.name}
           </option>
         )
       })
+      
   const content = option
   return content
 }

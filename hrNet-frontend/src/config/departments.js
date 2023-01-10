@@ -1,5 +1,5 @@
 
-export const departments = [
+export const DEPARTMENTS = [
     {
         "name": "Sales",
         "id": 1
