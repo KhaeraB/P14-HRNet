@@ -34,7 +34,7 @@ export const AddEmployee = () => {
   const [zipCode, setZipCode] = useState("");
   const [validName, setValidName] = useState(false);
   const [validDate, setValidDate] = useState(false);
-  const [departmentsEmployees, setDepartmentEmployees] = useState([]);
+  const [departmentsEmployees, setDepartmentEmployees] = useState("");
 
   useEffect(() => {
     setValidName(NAME_REGEX.test(firstName));
@@ -71,7 +71,7 @@ export const AddEmployee = () => {
       setCity("");
       setZipCode("");
       setState("");
-      setDepartmentEmployees([]);
+      setDepartmentEmployees("");
       navigate("/");
     }
   }, [isSuccess, navigate]);
@@ -83,29 +83,34 @@ export const AddEmployee = () => {
   const onStreetChanged = (e) => setStreet(e.target.value);
   const onCityChanged = (e) => setCity(e.target.value);
   const onZipCodeChanged = (e) => setZipCode(e.target.value);
+
   const onDepartmentsChanged = (e) => {
+    e.preventDefault()
     const values = Array.from(
       e.target.selectedOptions, //HTMLCollection
       (option) => option.value
     );
+    console.log(values)
     setDepartmentEmployees(values);
   };
 
   const onStateChanged = (e) => {
-    const values = Array.from(
+    e.preventDefault()
+    const value = Array.from(
       e.target.selectedOptions, //HTMLCollection
       (option) => option.value
     );
-    setState(values);
+    console.log(value)
+    setState(value);
   };
 
   const canSave =
     [departmentsEmployees.length, validName, validDate].every(Boolean) &&
     !isLoading;
 
-  const optionsDepartments = Object.values(DEPARTMENTS).map((department) => {
+  const optionsDepartments = DEPARTMENTS.map((department) => {
     return (
-      <option key={department.id} value={department.id}>
+      <option key={department.id} value={department.value}>
         {" "}
         {department.name}
       </option>
@@ -198,11 +203,10 @@ export const AddEmployee = () => {
             name="state"
             id="state"
             className={`empty form__select ${validDepartmentClass}`}
-            multiple={false}
             value={state}
             onChange={onStateChanged}
           >
-            <option value="" selected disabled>
+            <option value="" disabled>
               Select your State
             </option>
             {optionsStates}
@@ -225,11 +229,10 @@ export const AddEmployee = () => {
           name="department"
           id="department"
           className={`empty form__select ${validDepartmentClass}`}
-          multiple={false}
           value={departmentsEmployees}
           onChange={onDepartmentsChanged}
         >
-          <option value="" selected disabled>
+          <option value=""  disabled>
             Select your Department
           </option>
           {optionsDepartments}
