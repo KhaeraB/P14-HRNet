@@ -24,7 +24,7 @@ export const statesApiSlice = apiSlice.injectEndpoints({
         if (result?.ids) {
           return [
             { type: "States", id: "LIST" },
-            ...result.ids.map((id) => ({ type: "states", id })),
+            ...result.ids.map((id) => ({ type: "States", id })),
           ];
         } else return [{ type: "States", id: "LIST" }];
       }

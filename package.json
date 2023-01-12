@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KhaeraB/P14-HRNet#readme",
   "dependencies": {
-    "concurrently": "^7.5.0"
+    "concurrently": "^7.5.0",
+    "react-hook-form": "^7.41.5"
   }
 }

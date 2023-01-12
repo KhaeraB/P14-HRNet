@@ -1,27 +1,29 @@
 import { ButtonSubmit } from "../Home/index.styles";
 // import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useAddNewEmployeeMutation } from "../../features/employees/employeesApiSlice";
 import { useGetStatesQuery } from "../../features/datas/statesApiSlice";
 import { CreateForm, FieldSet } from "./index.styles";
-import { DatePicker } from "antd";
-import { DEPARTMENTS } from "../../config/departments";
+import { DatePicker, Form } from "antd";
 import OptionsStates from "../Options/optionStates";
-import { useEffect, useState } from "react";
+import { modal } from "../Modal/modal";
+import { useGetDepartmentsQuery } from "../../features/datas/departmentsApiSlice";
+import OptionsDept from "../Options/optionDepartments";
 
 const NAME_REGEX = /^[A-z]{3,20}$/;
 
 export const AddEmployee = () => {
   const [addNewEmployee, { isLoading, isSuccess, isError, error }] =
     useAddNewEmployeeMutation();
-
+const [form] = Form.useForm()
   const { data: states } = useGetStatesQuery();
+  const { data: departments } = useGetDepartmentsQuery();
 
-  const { ids } = states || {};
-
+  const { ids } = states || departments || {};
+  // const { deptIds } = ;
   const optionsStates = ids?.length ? <OptionsStates /> : null;
-
+  const optionsDept = ids?.length ? <OptionsDept /> : null;
   // const navigate = useNavigate();
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [birthDate, setBirthDate] = useState("");
@@ -31,7 +33,7 @@ export const AddEmployee = () => {
   const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [validName, setValidName] = useState(false);
-  const [departmentsEmployees, setDepartmentEmployees] = useState("");
+  const [department, setDepartmentEmployees] = useState("");
 
   useEffect(() => {
     setValidName(NAME_REGEX.test(firstName));
@@ -42,7 +44,7 @@ export const AddEmployee = () => {
     setValidName(NAME_REGEX.test(city));
     setValidName(NAME_REGEX.test(zipCode));
     setValidName(NAME_REGEX.test(state));
-    setValidName(NAME_REGEX.test(departmentsEmployees));
+    setValidName(NAME_REGEX.test(department));
   }, [
     firstName,
     lastName,
@@ -52,49 +54,9 @@ export const AddEmployee = () => {
     city,
     zipCode,
     state,
-    departmentsEmployees,
+    department,
   ]);
 
-  const modal = (message) => {
-    return (
-      <div
-        className="modal fade"
-        id="modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="modalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">{message}</div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" className="btn btn-primary">
-                
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
   useEffect(() => {
     if (isSuccess) {
       setFirstName("");
@@ -106,9 +68,6 @@ export const AddEmployee = () => {
       setZipCode("");
       setState("");
       setDepartmentEmployees("");
-      modal("New Employee Created!");
-    }else{
-      modal("Fail to Create New Employee");
     }
   }, [isSuccess]);
 
@@ -116,11 +75,11 @@ export const AddEmployee = () => {
 
   const onLastNameChanged = (e) => setLastName(e.target.value);
 
-  const onBirthDayChanged = (dateString) =>
-    setBirthDate(new Date(dateString).toLocaleDateString("fr"));
+  const onBirthDayChanged = (e) =>
+    setBirthDate(new Date(e).toLocaleDateString("fr"));
 
-  const onStartDateChanged = (dateString) =>
-    setStartDate(new Date(dateString).toLocaleDateString("fr"));
+  const onStartDateChanged = (e) =>
+    setStartDate(new Date(e).toLocaleDateString("fr"));
 
   const onStreetChanged = (e) => setStreet(e.target.value);
 
@@ -134,7 +93,7 @@ export const AddEmployee = () => {
       e.target.selectedOptions, //HTMLCollection
       (option) => option.value
     );
-    setDepartmentEmployees(values);
+    setDepartmentEmployees(values.toString());
   };
 
   const onStateChanged = (e) => {
@@ -143,16 +102,15 @@ export const AddEmployee = () => {
       e.target.selectedOptions, //HTMLCollection
       (option) => option.value
     );
-    setState(value);
+    setState(value.toString());
   };
 
   const canSave = [validName].every(Boolean) && !isLoading;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(canSave)
+
     if (canSave) {
-     
       await addNewEmployee({
         firstName,
         lastName,
@@ -162,30 +120,25 @@ export const AddEmployee = () => {
         city,
         zipCode,
         state,
-        departmentsEmployees,
+        department,
       });
+      form.resetFields()
+      modal("New Employee sucess");
+    } else {
+      modal("New Employee fail");
     }
   };
 
-  const optionsDepartments = DEPARTMENTS.map((department) => {
-    return (
-      <option key={department.id} value={department.name}>
-        {" "}
-        {department.name}
-      </option>
-    );
-  });
-
   const errClass = isError ? "errmsg" : "offscreen";
   const validStringClass = !validName ? "form__input--incomplete" : "";
-  const validDepartmentClass = !Boolean(departmentsEmployees.length)
+  const validDepartmentClass = !Boolean(department.length)
     ? "form__input--incomplete"
     : "";
-
+console.log(error)
   const content = (
     <>
       <p className={errClass}>{error?.data?.message}</p>
-      <CreateForm id="create-employee" onSubmit={handleSubmit}>
+      <CreateForm className="form" onSubmit={handleSubmit}>
         <label htmlFor="first-name">First Name</label>
 
         <input
@@ -208,10 +161,16 @@ export const AddEmployee = () => {
         />
 
         <label htmlFor="date-of-birth">Date of Birth</label>
-        <DatePicker onChange={onBirthDayChanged} />
+        <DatePicker
+          onChange={onBirthDayChanged}
+          className={`form__input ${validStringClass}`}
+        />
 
         <label htmlFor="start-date">Start Date</label>
-        <DatePicker onChange={onStartDateChanged} />
+        <DatePicker
+          onChange={onStartDateChanged}
+          className={`form__input ${validStringClass}`}
+        />
 
         <FieldSet className="address">
           <legend>Address</legend>
@@ -266,19 +225,18 @@ export const AddEmployee = () => {
           name="department"
           id="department"
           className={`empty form__select ${validDepartmentClass}`}
-          value={departmentsEmployees}
+          value={department}
           onChange={onDeptChanged}
         >
           <option value="" disabled>
             Select your Department
           </option>
-          {optionsDepartments}
+          {optionsDept}
         </select>
+
+        <ButtonSubmit type="submit" value="Save" disabled={!canSave} />
       </CreateForm>
-      <ButtonSubmit type="submit" value="Save" disabled={!canSave} />
-     
     </>
   );
-
   return content;
 };

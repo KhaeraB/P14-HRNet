@@ -406,7 +406,6 @@ template {
 }
 
 .form__select {
-  width: fit-content;
   padding: 0.25em;
 }
 
