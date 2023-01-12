@@ -41,9 +41,12 @@ export const ContentForm = styled(Container)`
             width: 60%; 
         }
 `
-export const ButtonSubmit = styled.button`
+export const ButtonSubmit = styled.input`
 background-color : ${customTheme.colors.primary500}; 
 color: ${customTheme.colors.neutral200}; 
+padding: 9px;
+border-radius: 15px;
+margin-top: 3%;
 &:hover{
     background-color : ${customTheme.colors.neutral100}; 
     color: ${customTheme.colors.neutral200}; 

@@ -1,5 +1,5 @@
 import { ButtonSubmit } from "../Home/index.styles";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useAddNewEmployeeMutation } from "../../features/employees/employeesApiSlice";
 import { useGetStatesQuery } from "../../features/datas/statesApiSlice";
 import { CreateForm, FieldSet } from "./index.styles";
@@ -9,36 +9,35 @@ import OptionsStates from "../Options/optionStates";
 import { useEffect, useState } from "react";
 
 const NAME_REGEX = /^[A-z]{3,20}$/;
-const DATE_REGEX = /^\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])$/;
 
 export const AddEmployee = () => {
+  const [addNewEmployee, { isLoading, isSuccess, isError, error }] =
+    useAddNewEmployeeMutation();
+
   const { data: states } = useGetStatesQuery();
-  let content;
 
   const { ids } = states || {};
 
   const optionsStates = ids?.length ? <OptionsStates /> : null;
 
-  const [addNewEmployee, { isLoading, isSuccess, isError, error }] =
-    useAddNewEmployeeMutation();
-
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [birthDatee, setBirthDate] = useState("");
+  const [birthDate, setBirthDate] = useState("");
   const [startDate, setStartDate] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [validName, setValidName] = useState(false);
-  const [validDate, setValidDate] = useState(false);
   const [departmentsEmployees, setDepartmentEmployees] = useState("");
 
   useEffect(() => {
     setValidName(NAME_REGEX.test(firstName));
     setValidName(NAME_REGEX.test(lastName));
+    setValidName(NAME_REGEX.test(birthDate));
+    setValidName(NAME_REGEX.test(startDate));
     setValidName(NAME_REGEX.test(street));
     setValidName(NAME_REGEX.test(city));
     setValidName(NAME_REGEX.test(zipCode));
@@ -47,7 +46,7 @@ export const AddEmployee = () => {
   }, [
     firstName,
     lastName,
-    birthDatee,
+    birthDate,
     startDate,
     street,
     city,
@@ -56,11 +55,46 @@ export const AddEmployee = () => {
     departmentsEmployees,
   ]);
 
-  useEffect(() => {
-    setValidDate(DATE_REGEX.test(birthDatee));
-    setValidDate(DATE_REGEX.test(startDate));
-  }, [birthDatee, startDate]);
-
+  const modal = (message) => {
+    return (
+      <div
+        className="modal fade"
+        id="modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <button
+                type="button"
+                className="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">{message}</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" className="btn btn-primary">
+                
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
   useEffect(() => {
     if (isSuccess) {
       setFirstName("");
@@ -72,58 +106,57 @@ export const AddEmployee = () => {
       setZipCode("");
       setState("");
       setDepartmentEmployees("");
-      navigate("/");
+      modal("New Employee Created!");
+    }else{
+      modal("Fail to Create New Employee");
     }
-  }, [isSuccess, navigate]);
+  }, [isSuccess]);
 
   const onFirstNameChanged = (e) => setFirstName(e.target.value);
+
   const onLastNameChanged = (e) => setLastName(e.target.value);
-  const onBirthDayChanged = (dateString) => setBirthDate(dateString);
-  const onStartDateChanged = (dateString) => setStartDate(dateString);
+
+  const onBirthDayChanged = (dateString) =>
+    setBirthDate(new Date(dateString).toLocaleDateString("fr"));
+
+  const onStartDateChanged = (dateString) =>
+    setStartDate(new Date(dateString).toLocaleDateString("fr"));
+
   const onStreetChanged = (e) => setStreet(e.target.value);
+
   const onCityChanged = (e) => setCity(e.target.value);
+
   const onZipCodeChanged = (e) => setZipCode(e.target.value);
 
-  const onDepartmentsChanged = (e) => {
-    e.preventDefault()
+  const onDeptChanged = (e) => {
+    e.preventDefault();
     const values = Array.from(
       e.target.selectedOptions, //HTMLCollection
       (option) => option.value
     );
-    console.log(values)
     setDepartmentEmployees(values);
   };
 
   const onStateChanged = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const value = Array.from(
       e.target.selectedOptions, //HTMLCollection
       (option) => option.value
     );
-    console.log(value)
     setState(value);
   };
 
-  const canSave =
-    [departmentsEmployees.length, validName, validDate].every(Boolean) &&
-    !isLoading;
+  const canSave = [validName].every(Boolean) && !isLoading;
 
-  const optionsDepartments = DEPARTMENTS.map((department) => {
-    return (
-      <option key={department.id} value={department.value}>
-        {" "}
-        {department.name}
-      </option>
-    );
-  });
-  
-  const onClicked = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(canSave)
     if (canSave) {
+     
       await addNewEmployee({
         firstName,
         lastName,
-        birthDatee,
+        birthDate,
         startDate,
         street,
         city,
@@ -134,16 +167,25 @@ export const AddEmployee = () => {
     }
   };
 
+  const optionsDepartments = DEPARTMENTS.map((department) => {
+    return (
+      <option key={department.id} value={department.name}>
+        {" "}
+        {department.name}
+      </option>
+    );
+  });
+
   const errClass = isError ? "errmsg" : "offscreen";
   const validStringClass = !validName ? "form__input--incomplete" : "";
   const validDepartmentClass = !Boolean(departmentsEmployees.length)
     ? "form__input--incomplete"
     : "";
 
-  content = (
+  const content = (
     <>
       <p className={errClass}>{error?.data?.message}</p>
-      <CreateForm action="#" id="create-employee" onSubmit={onClicked}>
+      <CreateForm id="create-employee" onSubmit={handleSubmit}>
         <label htmlFor="first-name">First Name</label>
 
         <input
@@ -151,7 +193,6 @@ export const AddEmployee = () => {
           id="last-name"
           className={`form__input ${validStringClass}`}
           name="firstName"
-          autoComplete="off"
           value={firstName}
           onChange={onFirstNameChanged}
         />
@@ -162,7 +203,6 @@ export const AddEmployee = () => {
           id="first-name"
           className={`form__input ${validStringClass}`}
           name="lastName"
-          autoComplete="off"
           value={lastName}
           onChange={onLastNameChanged}
         />
@@ -182,7 +222,6 @@ export const AddEmployee = () => {
             type="text"
             className={`form__input ${validStringClass}`}
             name="street"
-            autoComplete="off"
             value={street}
             onChange={onStreetChanged}
           />
@@ -193,7 +232,6 @@ export const AddEmployee = () => {
             type="text"
             className={`form__input ${validStringClass}`}
             name="city"
-            autoComplete="off"
             value={city}
             onChange={onCityChanged}
           />
@@ -218,7 +256,6 @@ export const AddEmployee = () => {
             type="text"
             className={`form__input ${validStringClass}`}
             name="zipCode"
-            autoComplete="off"
             value={zipCode}
             onChange={onZipCodeChanged}
           />
@@ -230,17 +267,16 @@ export const AddEmployee = () => {
           id="department"
           className={`empty form__select ${validDepartmentClass}`}
           value={departmentsEmployees}
-          onChange={onDepartmentsChanged}
+          onChange={onDeptChanged}
         >
-          <option value=""  disabled>
+          <option value="" disabled>
             Select your Department
           </option>
           {optionsDepartments}
         </select>
       </CreateForm>
-      <ButtonSubmit className="mt-2 btn border-0" title="Save">
-        Save
-      </ButtonSubmit>
+      <ButtonSubmit type="submit" value="Save" disabled={!canSave} />
+     
     </>
   );
 
