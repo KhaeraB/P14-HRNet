@@ -1,12 +1,13 @@
+
 import { ButtonSubmit } from "../Home/index.styles";
 // import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAddNewEmployeeMutation } from "../../features/employees/employeesApiSlice";
 import { useGetStatesQuery } from "../../features/datas/statesApiSlice";
 import { CreateForm, FieldSet } from "./index.styles";
-import { DatePicker, Form } from "antd";
+import { DatePicker} from "antd";
 import OptionsStates from "../Options/optionStates";
-import { modal } from "../Modal/modal";
+import ValidationModal from "../Modal/modal";
 import { useGetDepartmentsQuery } from "../../features/datas/departmentsApiSlice";
 import OptionsDept from "../Options/optionDepartments";
 
@@ -15,7 +16,6 @@ const NAME_REGEX = /^[A-z]{3,20}$/;
 export const AddEmployee = () => {
   const [addNewEmployee, { isLoading, isSuccess, isError, error }] =
     useAddNewEmployeeMutation();
-const [form] = Form.useForm()
   const { data: states } = useGetStatesQuery();
   const { data: departments } = useGetDepartmentsQuery();
 
@@ -34,6 +34,7 @@ const [form] = Form.useForm()
   const [zipCode, setZipCode] = useState("");
   const [validName, setValidName] = useState(false);
   const [department, setDepartmentEmployees] = useState("");
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
     setValidName(NAME_REGEX.test(firstName));
@@ -56,7 +57,8 @@ const [form] = Form.useForm()
     state,
     department,
   ]);
-
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   useEffect(() => {
     if (isSuccess) {
       setFirstName("");
@@ -68,8 +70,10 @@ const [form] = Form.useForm()
       setZipCode("");
       setState("");
       setDepartmentEmployees("");
+     
+
     }
-  }, [isSuccess]);
+  }, [isSuccess, show]);
 
   const onFirstNameChanged = (e) => setFirstName(e.target.value);
 
@@ -107,6 +111,7 @@ const [form] = Form.useForm()
 
   const canSave = [validName].every(Boolean) && !isLoading;
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -122,11 +127,8 @@ const [form] = Form.useForm()
         state,
         department,
       });
-      form.resetFields()
-      modal("New Employee sucess");
-    } else {
-      modal("New Employee fail");
-    }
+      setShow(<ValidationModal show={show} onHide={handleClose} backdrop="static" title="Success" body="New Employee Create !" keyboard={false} />)
+    } 
   };
 
   const errClass = isError ? "errmsg" : "offscreen";
@@ -134,7 +136,8 @@ const [form] = Form.useForm()
   const validDepartmentClass = !Boolean(department.length)
     ? "form__input--incomplete"
     : "";
-console.log(error)
+
+   
   const content = (
     <>
       <p className={errClass}>{error?.data?.message}</p>
@@ -234,7 +237,8 @@ console.log(error)
           {optionsDept}
         </select>
 
-        <ButtonSubmit type="submit" value="Save" disabled={!canSave} />
+        <ButtonSubmit type="submit" value="Save" disabled={!canSave} onClick={handleShow}/>
+        {handleShow ? show : null}
       </CreateForm>
     </>
   );
