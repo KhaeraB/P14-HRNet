@@ -10,22 +10,13 @@ This codebase contains the code needed to run the backend for Argent Bank.
 
 ## Getting Started
 
-### Prerequisites
+### Info
 
 Hr Net uses the following tech stack:
 
 - [Node.js v12](https://nodejs.org/en/)
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-
-Please make sure you have the right versions and download both packages. You can verify this by using the following commands in your terminal:
-
-```bash
-# Check Node.js version
-node --version
-
-# Check Mongo version
-mongo --version
-```
+- [Folder](https://github.com/KhaeraB/P14-HrNet-BackEnd)
 
 ### Instructions
 
@@ -50,12 +41,10 @@ $ git submodule update
 
 ```bash
 # with NPM
-cd hrNet-frontend && npm install && cd..    
-cd hrNet-backend && npm i && cd..     
+cd hrNet-frontend && npm install && cd..   
 
 # with YARN
-cd hrNet-frontend && yarn && cd..    
-cd hrNet-backend && yarn && cd..   
+cd hrNet-frontend && yarn && cd..   
 
 # Start local dev server
 npm run dev
@@ -65,7 +54,7 @@ ctrl +c x2
 
 ```
 
-Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
+Your server should now be running at https://p14-hrnet-api.herokuapp.com/ and you will now have two users in your MongoDB database!
 
 ### Added dependencies
 
