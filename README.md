@@ -16,7 +16,7 @@ Hr Net uses the following tech stack:
 
 - [Node.js v12](https://nodejs.org/en/)
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-- [Folder](https://github.com/KhaeraB/P14-HrNet-BackEnd)
+- [Folder Back End which is on Heroku](https://github.com/KhaeraB/P14-HrNet-BackEnd)
 
 ### Instructions
 
