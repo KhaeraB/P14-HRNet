@@ -1,19 +1,20 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import PropTypes from "prop-types"
 import { Backdrop, ModalForm } from "./index.styles";
 
-const ValidationModal = (props, show, handleClose) => {
+export const ValidationModal = ({show, onHide, title, body}) => {
   
-  return (
+  return  (
     <>
       <Backdrop>
-        <ModalForm show={show} onHide={handleClose} keyboard={false}>
+        <ModalForm show={show} onClick={onHide} keyboard={false}>
           <Modal.Header closeButton>
-            <Modal.Title>{props.title}</Modal.Title>
+            <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>{props.body}</Modal.Body>
+          <Modal.Body>{body}</Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={onHide}>
               Close
             </Button>
           </Modal.Footer>
@@ -22,4 +23,8 @@ const ValidationModal = (props, show, handleClose) => {
     </>
   );
 };
-export default ValidationModal;
+
+ValidationModal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  onHide: PropTypes.func.isRequired
+}

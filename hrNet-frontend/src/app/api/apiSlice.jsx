@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 
 export const apiSlice = createApi({
-    baseQuery: fetchBaseQuery({baseUrl: 'https://p14-hrnet-api.herokuapp.com/'}), 
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3001/'}), 
     tagTypes: ['Employees', 'States', 'Departments'], 
     endpoints: builder =>({})
 })

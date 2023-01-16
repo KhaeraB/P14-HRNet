@@ -7,7 +7,7 @@ import { useGetStatesQuery } from "../../features/datas/statesApiSlice";
 import { CreateForm, FieldSet } from "./index.styles";
 import { DatePicker} from "antd";
 import OptionsStates from "../Options/optionStates";
-import ValidationModal from "../Modal/modal";
+import {ValidationModal} from "../Modal/modal";
 import { useGetDepartmentsQuery } from "../../features/datas/departmentsApiSlice";
 import OptionsDept from "../Options/optionDepartments";
 
@@ -57,8 +57,10 @@ export const AddEmployee = () => {
     state,
     department,
   ]);
-  const handleClose = () => setShow(false);
+
+  // const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   useEffect(() => {
     if (isSuccess) {
       setFirstName("");
@@ -70,8 +72,6 @@ export const AddEmployee = () => {
       setZipCode("");
       setState("");
       setDepartmentEmployees("");
-     
-
     }
   }, [isSuccess, show]);
 
@@ -127,7 +127,6 @@ export const AddEmployee = () => {
         state,
         department,
       });
-      setShow(<ValidationModal show={show} onHide={handleClose} backdrop="static" title="Success" body="New Employee Create !" keyboard={false} />)
     } 
   };
 
@@ -136,6 +135,7 @@ export const AddEmployee = () => {
   const validDepartmentClass = !Boolean(department.length)
     ? "form__input--incomplete"
     : "";
+
 
    
   const content = (
@@ -238,7 +238,9 @@ export const AddEmployee = () => {
         </select>
 
         <ButtonSubmit type="submit" value="Save" disabled={!canSave} onClick={handleShow}/>
-        {handleShow ? show : null}
+
+        {show=== true ? <ValidationModal show={show} onHide={()=> setShow(false)} backdrop="static" title="Success" body="New Employee Create !" keyboard={false} />: null}
+      
       </CreateForm>
     </>
   );
