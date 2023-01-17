@@ -314,7 +314,9 @@ textarea {
   height: auto;
 }
 
-
+/**
+* Form
+*/
 
 /* Interactive
    ========================================================================== */
@@ -384,7 +386,11 @@ template {
 .icon-button[disabled] {
   visibility: hidden;
 }
+.form{
+  display: flex;
+  flex-direction: column;
 
+}
 .form__input,
 .form__submit-button {
   padding: 0.5em;
@@ -399,6 +405,11 @@ template {
   border: 1px solid var(--INPUT-INVALID);
   outline: 1px solid var(--INPUT-INVALID);
 }
+.form__input--complete {
+  border: 1px solid var(--STATUS-COMPLETE);
+  outline: 1px solid var(--STATUS-COMPLETE);
+}
+
 
 .form__checkbox {
   width: 24px;

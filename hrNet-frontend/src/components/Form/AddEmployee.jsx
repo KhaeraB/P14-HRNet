@@ -167,12 +167,14 @@ export const AddEmployee = () => {
         <DatePicker
           onChange={onBirthDayChanged}
           className={`form__input ${validStringClass}`}
+          picker="date"  format='DD/MM/YYYY'
         />
 
         <label htmlFor="start-date">Start Date</label>
         <DatePicker
           onChange={onStartDateChanged}
           className={`form__input ${validStringClass}`}
+          picker="date"  format='DD/MM/YYYY'
         />
 
         <FieldSet className="address">
