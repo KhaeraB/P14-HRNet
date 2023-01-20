@@ -48,14 +48,14 @@ const TableEmployees = ({ ids }) => {
                         dataSource={filterData == null ? data : filterData} 
                         size='middle' 
                         pagination={{
-                            style:{marginTop:'30px'},
+                            style:{marginTop:'40px'},
                             defaultPageSize:10, 
                             defaultCurrent:1,
                             showSizeChanger:true,
                             size: 'small',
                             position: ['bottomCenter'],
-                            showAllData: (pages, range) => (
-                                `Showing ${range[0]} to ${range[1]} of ${pages} entries`
+                            showTotal: (total, range) => (
+                                `Showing ${range[0]} to ${range[1]} of ${total} entries`
                             )
                         }} 
                         scroll={{y: 500}} 
