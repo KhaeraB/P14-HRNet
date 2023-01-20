@@ -1,10 +1,10 @@
 import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
-import BgHome from '../../assets/backgroundImg.jpg'
 import { customTheme } from '../../utils/style/variables'
-// import { customTheme } from '../../utils/style/variables'
+
+
 export const Main= styled.main`
-    background-image: url(${BgHome}); 
+background-color : ${customTheme.colors.neutral800}; 
     background-repeat: no-repeat; 
     background-size: cover;
     height:100%; 
