@@ -57,4 +57,5 @@ export const TitleForm = styled.h2`
     font-weight : lighter; 
     color: ${customTheme.colors.primary500}; 
     text-align: center; 
+    font-weight : bold; 
 `

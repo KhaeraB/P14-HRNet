@@ -1,29 +1,34 @@
-
-import { ButtonSubmit } from "../Home/index.styles";
-// import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Button, DatePicker, Divider, Form, Input, Select } from "antd";
 import { useAddNewEmployeeMutation } from "../../features/employees/employeesApiSlice";
-import { useGetStatesQuery } from "../../features/datas/statesApiSlice";
-import { CreateForm, FieldSet } from "./index.styles";
-import { DatePicker} from "antd";
-import OptionsStates from "../Options/optionStates";
-import {ValidationModal} from "../Modal/modal";
-import { useGetDepartmentsQuery } from "../../features/datas/departmentsApiSlice";
-import OptionsDept from "../Options/optionDepartments";
+import {
+  selectAllStates,
+  useGetStatesQuery,
+} from "../../features/datas/statesApiSlice";
+import {
+  selectAllDepartments,
+  useGetDepartmentsQuery,
+} from "../../features/datas/departmentsApiSlice";
 
-const NAME_REGEX = /^[A-z]{3,20}$/;
+import Modale from "ui-modale-kb";
+import { useSelector } from "react-redux";
 
+const { Option } = Select;
+/**
+ * Description : Form to Add Employee 
+ * @returns {form, addNewEmployee}
+ */
 export const AddEmployee = () => {
-  const [addNewEmployee, { isLoading, isSuccess, isError, error }] =
-    useAddNewEmployeeMutation();
+  // Data
+  const [addNewEmployee, { isSuccess }] = useAddNewEmployeeMutation();
   const { data: states } = useGetStatesQuery();
   const { data: departments } = useGetDepartmentsQuery();
-
   const { ids } = states || departments || {};
-  // const { deptIds } = ;
-  const optionsStates = ids?.length ? <OptionsStates /> : null;
-  const optionsDept = ids?.length ? <OptionsDept /> : null;
-  // const navigate = useNavigate();
+  const deptData = useSelector((state) => selectAllDepartments(state, ids));
+  const statesData = useSelector((state) => selectAllStates(state, ids));
+  //Form
+  const [form] = Form.useForm();
+  //State
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [birthDate, setBirthDate] = useState("");
@@ -32,49 +37,12 @@ export const AddEmployee = () => {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState("");
-  const [validName, setValidName] = useState(false);
   const [department, setDepartmentEmployees] = useState("");
-  const [show, setShow] = useState(false)
 
-  useEffect(() => {
-    setValidName(NAME_REGEX.test(firstName));
-    setValidName(NAME_REGEX.test(lastName));
-    setValidName(NAME_REGEX.test(birthDate));
-    setValidName(NAME_REGEX.test(startDate));
-    setValidName(NAME_REGEX.test(street));
-    setValidName(NAME_REGEX.test(city));
-    setValidName(NAME_REGEX.test(zipCode));
-    setValidName(NAME_REGEX.test(state));
-    setValidName(NAME_REGEX.test(department));
-  }, [
-    firstName,
-    lastName,
-    birthDate,
-    startDate,
-    street,
-    city,
-    zipCode,
-    state,
-    department,
-  ]);
+  // Modale
+  const [displayModale, setDisplayModale] = useState(false);
 
-  // const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  useEffect(() => {
-    if (isSuccess) {
-      setFirstName("");
-      setLastName("");
-      setBirthDate("");
-      setStartDate("");
-      setStreet("");
-      setCity("");
-      setZipCode("");
-      setState("");
-      setDepartmentEmployees("");
-    }
-  }, [isSuccess, show]);
-
+  //OnChange values
   const onFirstNameChanged = (e) => setFirstName(e.target.value);
 
   const onLastNameChanged = (e) => setLastName(e.target.value);
@@ -92,158 +60,286 @@ export const AddEmployee = () => {
   const onZipCodeChanged = (e) => setZipCode(e.target.value);
 
   const onDeptChanged = (e) => {
-    e.preventDefault();
-    const values = Array.from(
-      e.target.selectedOptions, //HTMLCollection
-      (option) => option.value
-    );
-    setDepartmentEmployees(values.toString());
+    setDepartmentEmployees(e);
   };
 
   const onStateChanged = (e) => {
-    e.preventDefault();
-    const value = Array.from(
-      e.target.selectedOptions, //HTMLCollection
-      (option) => option.value
-    );
-    setState(value.toString());
+    setState(e);
   };
 
-  const canSave = [validName].every(Boolean) && !isLoading;
-
-
+  //HandleSubmit
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (canSave) {
-      await addNewEmployee({
-        firstName,
-        lastName,
-        birthDate,
-        startDate,
-        street,
-        city,
-        zipCode,
-        state,
-        department,
-      });
-    } 
+    await addNewEmployee({
+      firstName,
+      lastName,
+      birthDate,
+      startDate,
+      street,
+      city,
+      zipCode,
+      state,
+      department,
+    });
+    setDisplayModale(true);
+    form.resetFields();
   };
 
-  const errClass = isError ? "errmsg" : "offscreen";
-  const validStringClass = !validName ? "form__input--incomplete" : "";
-  const validDepartmentClass = !Boolean(department.length)
-    ? "form__input--incomplete"
-    : "";
-
-
-   
   const content = (
     <>
-      <p className={errClass}>{error?.data?.message}</p>
-      <CreateForm className="form" onSubmit={handleSubmit}>
-        <label htmlFor="first-name">First Name</label>
-
-        <input
-          type="text"
-          id="last-name"
-          className={`form__input ${validStringClass}`}
+      <Form form={form} autoComplete="off" onFinish={handleSubmit}>
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="First Name"
           name="firstName"
-          value={firstName}
-          onChange={onFirstNameChanged}
-        />
+          htmlFor="firstName"
+          rules={[
+            { required: true, message: "Please enter the first name" },
+            { whitespace: true },
+            { min: 2 },
+          ]}
+          hasFeedback
+        >
+          <Input
+            placeholder="Type a first name"
+            value={firstName}
+            onChange={onFirstNameChanged}
+            name="firstName"
+          />
+        </Form.Item>
 
-        <label htmlFor="last-name">Last Name</label>
-        <input
-          type="text"
-          id="first-name"
-          className={`form__input ${validStringClass}`}
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="Last Name"
           name="lastName"
-          value={lastName}
-          onChange={onLastNameChanged}
-        />
+          htmlFor="lastName"
+          rules={[
+            { required: true, message: "Please enter the last name" },
+            { whitespace: true },
+            { min: 2 },
+          ]}
+          hasFeedback
+        >
+          <Input
+            placeholder="Type a last name"
+            name="lastName"
+            value={lastName}
+            onChange={onLastNameChanged}
+          />
+        </Form.Item>
 
-        <label htmlFor="date-of-birth">Date of Birth</label>
-        <DatePicker
-          onChange={onBirthDayChanged}
-          className={`form__input ${validStringClass}`}
-          picker="date"  format='DD/MM/YYYY'
-        />
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="Date of Birth"
+          name="birthdate"
+          htmlFor="birthdate"
+          rules={[{ required: true, message: "Please enter a date of birth" }]}
+        >
+          <DatePicker
+            style={{ width: "100%" }}
+            picker="date"
+            format="DD/MM/YYYY"
+            name="birthDate"
+            onChange={onBirthDayChanged}
+          />
+        </Form.Item>
 
-        <label htmlFor="start-date">Start Date</label>
-        <DatePicker
-          onChange={onStartDateChanged}
-          className={`form__input ${validStringClass}`}
-          picker="date"  format='DD/MM/YYYY'
-        />
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="Date of start"
+          name="startDate"
+          htmlFor="startDate"
+          rules={[{ required: true, message: "Please enter a date" }]}
+        >
+          <DatePicker
+            style={{ width: "100%" }}
+            picker="date"
+            format="DD/MM/YYYY"
+            name="startDate"
+            onChange={onStartDateChanged}
+          />
+        </Form.Item>
 
-        <FieldSet className="address">
-          <legend>Address</legend>
+        <Divider
+          style={{
+            border: "#6cad09",
+            color: "#6cad09",
+            fontSize: "16px",
+            fontWeight: "700",
+            marginTop: "20px",
+            marginBottom: "20px",
+          }}
+          orientation="center"
+        >
+          Address
+        </Divider>
 
-          <label htmlFor="street">Street</label>
-          <input
-            id="street"
-            type="text"
-            className={`form__input ${validStringClass}`}
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="Street"
+          name="street"
+          htmlFor="street"
+          rules={[
+            { required: true, message: "Please enter the street" },
+            { whitespace: true },
+            { min: 2 },
+          ]}
+          hasFeedback
+        >
+          <Input
+            placeholder="Type a street"
             name="street"
             value={street}
             onChange={onStreetChanged}
           />
+        </Form.Item>
 
-          <label htmlFor="city">City</label>
-          <input
-            id="city"
-            type="text"
-            className={`form__input ${validStringClass}`}
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="City"
+          name="city"
+          htmlFor="city"
+          rules={[
+            { required: true, message: "Please enter the city" },
+            { whitespace: true },
+            { min: 2 },
+          ]}
+          hasFeedback
+        >
+          <Input
+            placeholder="Type a city"
             name="city"
             value={city}
             onChange={onCityChanged}
           />
+        </Form.Item>
 
-          <label htmlFor="state">State</label>
-          <select
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="State"
+          name="state"
+          htmlFor="state"
+          rules={[{ required: true, message: "Select a state" }]}
+        >
+          <Select
+            placeholder="Select a State"
+            allowClear
             name="state"
-            id="state"
-            className={`empty form__select ${validDepartmentClass}`}
+            aria-label="select a state"
+            aria-expanded="true"
+            aria-owns="state"
+            aria-controls="state"
+            aria-activedescendant=""
             value={state}
             onChange={onStateChanged}
           >
-            <option value="" disabled>
-              Select your State
-            </option>
-            {optionsStates}
-          </select>
+            {statesData.map((state) => (
+              <Option value={state.name} key={state.abbreviation}>
+                {state.name}
+              </Option>
+            ))}
+          </Select>
+        </Form.Item>
 
-          <label htmlFor="zip-code">Zip Code</label>
-          <input
-            id="zip-code"
-            type="text"
-            className={`form__input ${validStringClass}`}
-            name="zipCode"
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="Zip Code"
+          name="zipCode"
+          htmlFor="zipcode"
+          rules={[
+            {
+              required: true,
+              message: "Add a zip code",
+            },
+          ]}
+        >
+          <Input
+            style={{ width: "100%" }}
+            placeholder="Add zip code"
+            name="zipcode"
             value={zipCode}
             onChange={onZipCodeChanged}
           />
-        </FieldSet>
+        </Form.Item>
 
-        <label htmlFor="department">Department</label>
-        <select
-          name="department"
-          id="department"
-          className={`empty form__select ${validDepartmentClass}`}
-          value={department}
-          onChange={onDeptChanged}
+        <Divider
+          orientation="center"
+          style={{
+            border: "#6cad09",
+            color: "#6cad09",
+            fontSize: "16px",
+            fontWeight: "700",
+            marginTop: "30px",
+            textAlign: "center",
+          }}
         >
-          <option value="" disabled>
-            Select your Department
-          </option>
-          {optionsDept}
-        </select>
+          Department
+        </Divider>
 
-        <ButtonSubmit type="submit" value="Save" disabled={!canSave} onClick={handleShow}/>
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          label="Department"
+          wrapperCol={{ span: 24 }}
+          name="department"
+          htmlFor="department"
+          rules={[{ required: true, message: "Select a department" }]}
+        >
+          <Select
+            placeholder="Select a department"
+            name="department"
+            aria-expanded="true"
+            aria-owns="department"
+            aria-controls="department"
+            aria-activedescendant=""
+            value={department}
+            onChange={onDeptChanged}
+          >
+            {deptData.map((department) => (
+              <Option value={department.name} key={department.id}>
+                {department.name}
+              </Option>
+            ))}
+          </Select>
+        </Form.Item>
 
-        {show=== true ? <ValidationModal show={show} onHide={()=> setShow(false)} backdrop="static" title="Success" body="New Employee Create !" keyboard={false} />: null}
-      
-      </CreateForm>
+        <Form.Item
+          labelCol={{ span: 24 }}
+          style={{ marginBottom: "12px" }}
+          wrapperCol={{ span: 24 }}
+        >
+          <Button
+            block
+            style={{ background: "#6cad09", padding:"22px 0", lineHeight:0, fontSize:"15px", color: "white", width: "100%" }}
+            htmlType="submit"
+          >
+            Save
+          </Button>
+        </Form.Item>
+
+        {isSuccess ? (
+          <Modale
+            title="Success"
+            content="New employee created !"
+            displayModale={displayModale}
+            onHide={() => setDisplayModale(false)}
+          />
+        ) : (
+          <Modale
+            title="Oups !"
+            content="Failed to create a new employee !"
+            displayModale={displayModale}
+            onHide={() => setDisplayModale(false)}
+          />
+        )}
+      </Form>
     </>
   );
   return content;

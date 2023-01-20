@@ -2,6 +2,11 @@ import TableEmployees from "../../components/Table/TableEmployees";
 import { useGetEmployeesQuery } from "./employeesApiSlice";
 import { Container } from "react-bootstrap";
 
+
+/**
+ * Description : Parent of Form to dispatch the data employees
+ * @returns {any}
+ */
 const EmployeesList = () => {
   const {
     data: employees,

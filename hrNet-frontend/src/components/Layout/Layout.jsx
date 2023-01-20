@@ -5,6 +5,10 @@ import { Link, Outlet } from 'react-router-dom'
 import { LogoImg, ContentNavBar, TitleLogo, ContentFooter, LogoImgFooter, TitleFooter } from './index.styles'
 import Logo from '../../assets/logo.png'
 
+/**
+ * Description: Layout Header
+ * @returns {any}
+ */
 export const Header = () => {
   const content = (
     <ContentNavBar fluid={true} className="p-0">
@@ -19,6 +23,10 @@ export const Header = () => {
   )
   return content
 }
+/**
+ * Description: Layout Footer
+ * @returns {any}
+ */
 export const Footer = () => {
   const content = (
     <ContentFooter fluid={true} className="p-0 d-flex justify-content-center">

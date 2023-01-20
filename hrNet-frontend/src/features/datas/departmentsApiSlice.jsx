@@ -5,6 +5,11 @@ const departmentsAdapter = createEntityAdapter({});
 
 const initialState = departmentsAdapter.getInitialState();
 
+/**
+ * Description : Data for Select Department en Form
+ * @param {(builder)} {endpoints}
+ * @returns {any}
+ */
 export const departmentsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getDepartments: builder.query({

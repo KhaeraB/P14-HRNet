@@ -3,6 +3,10 @@ import { AddEmployee } from '../Form/AddEmployee'
 import { ContentForm, ContainerBg, TitleForm, Main } from './index.styles'
 
 
+/**
+ * Description Home Page With Form
+ * @returns {Form: AddEmployee}
+ */
 const Home = () => {
  
     const content = (
@@ -12,7 +16,6 @@ const Home = () => {
             <TitleForm>Create Employee</TitleForm>
             <AddEmployee />
           </ContentForm>
-          <div id="confirmation" className="modal">Employee Created!</div>
         </ContainerBg>
       </Main>
     )

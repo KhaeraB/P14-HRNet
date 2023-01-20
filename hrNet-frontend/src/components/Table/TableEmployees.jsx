@@ -6,6 +6,11 @@ import { columns } from '../../config/ColumnsTableData'
 import { selectAllEmployees, useGetEmployeesQuery } from '../../features/employees/employeesApiSlice';
 
 
+/**
+ * Description Table Employees with Antd
+ * @param {any} {ids}
+ * @returns {Data : selectAllEmployees}
+ */
 const TableEmployees = ({ ids }) => {
     document.title = "Wealth Health - Employees List";
     const [filterData, setFilterData] = useState(null);

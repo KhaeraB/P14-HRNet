@@ -5,6 +5,11 @@ const statesAdapter = createEntityAdapter({});
 
 const initialState = statesAdapter.getInitialState();
 
+/**
+ * Description : Data for Select State en Form
+ * @param {(builder)} {endpoints}
+ * @returns {any}
+ */
 export const statesApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getStates: builder.query({

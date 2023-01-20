@@ -5,6 +5,11 @@ const employeesAdapter = createEntityAdapter({});
 
 const initialState = employeesAdapter.getInitialState();
 
+/**
+ * Description : Data AllEmlployees, Employee  
+ * @param {(builder)} {endpoints}
+ * @returns {any}
+ */
 export const employeesApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getEmployees: builder.query({
