@@ -1,6 +1,6 @@
 import TableEmployees from "../../components/Table/TableEmployees";
 import { useGetEmployeesQuery } from "./employeesApiSlice";
-import { Container } from "react-bootstrap";
+import { ContainerTable } from "./index.styles";
 
 
 /**
@@ -30,7 +30,7 @@ const EmployeesList = () => {
 
     const tableContent = ids?.length ? <TableEmployees /> : null;
 
-    content = <Container>{tableContent}</Container>;
+    content = <ContainerTable>{tableContent}</ContainerTable>;
   }
 
   return content;

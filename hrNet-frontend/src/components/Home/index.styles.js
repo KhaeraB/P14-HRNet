@@ -2,7 +2,6 @@ import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
 import { customTheme } from '../../utils/style/variables'
 
-
 export const Main= styled.main`
 background-color : ${customTheme.colors.neutral800}; 
     background-repeat: no-repeat; 
@@ -29,12 +28,10 @@ export const ContentForm = styled(Container)`
     flex-direction : column; 
     width: 33%; 
     background-color: white; 
-    position: relative;
-    top: 10%;
-    left: 0%;
     padding: 1%; 
     border-radius: 10px; 
-    @media (min-width: 375px) and (max-width: 425px) {
+    margin: 0 auto; 
+    @media (min-width: 320px) and (max-width: 425px) {
         width: 100%; 
     }
         @media (min-width: 425px) and (max-width: 980px) {

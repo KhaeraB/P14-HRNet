@@ -32,7 +32,7 @@ const TableEmployees = ({ ids }) => {
             setFilterData(filterEmployee);
         };
         return ( <>
-            <FormItem style={{display:'flex', justifyContent: 'flex-end', alignItems:'center', margin:'50px 20px 32px 25px'}}>
+            <FormItem style={{display:'flex', justifyContent: 'flex-end', alignItems:'center', margin:'50px 15px 9px 25px'}}>
                 <Input.Search 
                     placeholder="Search by..."
                     allowClear
@@ -48,7 +48,7 @@ const TableEmployees = ({ ids }) => {
                         dataSource={filterData == null ? data : filterData} 
                         size='middle' 
                         pagination={{
-                            style:{marginTop:'40px'},
+                            style:{margin:'47px 0'},
                             defaultPageSize:10, 
                             defaultCurrent:1,
                             showSizeChanger:true,

@@ -11,7 +11,7 @@ const Home = () => {
  
     const content = (
       <Main>
-        <ContainerBg fluid={true}>
+        <ContainerBg fluid>
           <ContentForm>
             <TitleForm>Create Employee</TitleForm>
             <AddEmployee />

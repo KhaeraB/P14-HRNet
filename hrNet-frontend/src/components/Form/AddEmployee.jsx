@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, DatePicker, Divider, Form, Input, Select } from "antd";
+import { Button, DatePicker, Divider, Form, Input, InputNumber, Select } from "antd";
 import { useAddNewEmployeeMutation } from "../../features/employees/employeesApiSlice";
 import {
   selectAllStates,
@@ -57,7 +57,7 @@ export const AddEmployee = () => {
 
   const onCityChanged = (e) => setCity(e.target.value);
 
-  const onZipCodeChanged = (e) => setZipCode(e.target.value);
+  const onZipCodeChanged = (e) => setZipCode(e.toString());
 
   const onDeptChanged = (e) => {
     setDepartmentEmployees(e);
@@ -260,7 +260,7 @@ export const AddEmployee = () => {
             },
           ]}
         >
-          <Input
+          <InputNumber
             style={{ width: "100%" }}
             placeholder="Add zip code"
             name="zipcode"

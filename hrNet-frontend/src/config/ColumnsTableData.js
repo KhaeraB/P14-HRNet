@@ -1,4 +1,3 @@
-import moment from 'moment'
 
 export const columns = [
     {
@@ -21,7 +20,8 @@ export const columns = [
         'title': 'Start date',
         'dataIndex': 'startDate',
         'accessor': 'startDate',
-        sorter: (employeeA, employeeB) => moment(employeeA.startDate, 'DD-MM-YYYY')  - moment(employeeB.startDate,'DD-MM-YYYY'),
+        sorter: (employeeA, employeeB) =>    !employeeA.startDate - !employeeB.startDate ||
+        employeeB.startDate.localeCompare(employeeA.startDate),
         defaultSortOrder: 'ascend',
     },
     {
@@ -36,7 +36,8 @@ export const columns = [
         'title': 'Birthdate',
         'dataIndex': 'birthDate',
         'accessor': 'birthDate',
-        sorter: (employeeA, employeeB) => moment(employeeA.birthDate, 'DD-MM-YYYY')  - moment(employeeB.birthdate,'DD-MM-YYYY'),
+        sorter: (employeeA, employeeB) => !employeeA.birthDate - !employeeB.birthDate ||
+        employeeB.birthDate.localeCompare(employeeA.birthDate),
         defaultSortOrder: 'ascend',
     },
     {
