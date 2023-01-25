@@ -1,0 +1,4295 @@
+{
+  "requestedUrl": "https://p14-front-end-hr-net.vercel.app/",
+  "finalUrl": "https://p14-front-end-hr-net.vercel.app/",
+  "lighthouseVersion": "9.6.6",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/109.0.5414.101 Safari/537.36",
+  "fetchTime": "2023-01-25T10:18:38.176Z",
+  "environment": {
+    "networkUserAgent": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4695.0 Mobile Safari/537.36 Chrome-Lighthouse",
+    "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/109.0.5414.101 Safari/537.36",
+    "benchmarkIndex": 1450
+  },
+  "runWarnings": [],
+  "configSettings": {
+    "emulatedFormFactor": "mobile",
+    "formFactor": "mobile",
+    "locale": "en-US",
+    "onlyCategories": [
+      "pwa",
+      "performance",
+      "accessibility",
+      "best-practices",
+      "seo"
+    ],
+    "channel": "lr"
+  },
+  "audits": {
+    "first-contentful-paint-3g": {
+      "id": "first-contentful-paint-3g",
+      "title": "First Contentful Paint (3G)",
+      "description": "First Contentful Paint 3G marks the time at which the first text or image is painted while on a 3G network. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint).",
+      "score": 0.29,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "5560 ms",
+      "numericValue": 5560,
+      "numericUnit": "millisecond"
+    },
+    "definition-list": {
+      "id": "definition-list",
+      "title": "`<dl>`'s contain only properly-ordered `<dt>` and `<dd>` groups, `<script>`, `<template>` or `<div>` elements.",
+      "description": "When definition lists are not properly marked up, screen readers may produce confusing or inaccurate output. [Learn more](https://web.dev/definition-list/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "layout-shift-elements": {
+      "id": "layout-shift-elements",
+      "title": "Avoid large layout shifts",
+      "description": "These DOM elements contribute most to the CLS of the page.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "2 elements found",
+      "details": {
+        "headings": [
+          {
+            "key": "node",
+            "text": "Element",
+            "itemType": "node"
+          },
+          {
+            "key": "score",
+            "granularity": 0.001,
+            "itemType": "numeric",
+            "text": "CLS Contribution"
+          }
+        ],
+        "type": "table",
+        "items": [
+          {
+            "score": 0.003248868943767465,
+            "node": {
+              "path": "0,HTML,1,BODY,1,DIV,2,FORM",
+              "snippet": "<form action=\"#\" id=\"create-employee\">",
+              "boundingRect": {
+                "left": 344,
+                "top": 174,
+                "height": 654,
+                "bottom": 828,
+                "right": 636,
+                "width": 292
+              },
+              "lhId": "page-17-FORM",
+              "selector": "body > div.container > form#create-employee",
+              "type": "node",
+              "nodeLabel": "First Name\nLast Name\nDate of Birth\nStart Date\nAddress\nStreet\nCity\nState\nAlabama…"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Save",
+              "snippet": "<button onclick=\"saveEmployee()\">",
+              "path": "0,HTML,1,BODY,1,DIV,3,BUTTON",
+              "selector": "body > div.container > button",
+              "lhId": "page-18-BUTTON",
+              "boundingRect": {
+                "left": 467,
+                "height": 21,
+                "right": 513,
+                "top": 844,
+                "width": 46,
+                "bottom": 865
+              },
+              "type": "node"
+            },
+            "score": 0.0000328684114582482
+          }
+        ]
+      }
+    },
+    "full-page-screenshot": {
+      "id": "full-page-screenshot",
+      "title": "Full-page screenshot",
+      "description": "A full-height screenshot of the final rendered page",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "screenshot": {
+          "height": 640,
+          "data": "data:image/jpeg;base64,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9WhW1KRF8zMREZn3g0xBiHQHMQOgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/2Q==",
+          "width": 360
+        },
+        "type": "full-page-screenshot",
+        "nodes": {
+          "6-8-SCRIPT": {
+            "top": 0,
+            "bottom": 0,
+            "right": 0,
+            "height": 0,
+            "left": 0,
+            "width": 0
+          },
+          "6-6-SCRIPT": {
+            "width": 0,
+            "top": 0,
+            "height": 0,
+            "right": 0,
+            "left": 0,
+            "bottom": 0
+          },
+          "page-3-BUTTON": {
+            "right": 0,
+            "bottom": 0,
+            "left": 0,
+            "height": 0,
+            "width": 0,
+            "top": 0
+          },
+          "page-8-BUTTON": {
+            "right": 0,
+            "bottom": 0,
+            "height": 0,
+            "top": 0,
+            "width": 0,
+            "left": 0
+          },
+          "6-2-LINK": {
+            "left": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0
+          },
+          "page-16-H2": {
+            "left": 393,
+            "right": 587,
+            "height": 28,
+            "width": 195,
+            "top": 126,
+            "bottom": 154
+          },
+          "6-11-DIV": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "page-18-BUTTON": {
+            "width": 46,
+            "right": 513,
+            "bottom": 865,
+            "height": 21,
+            "left": 467,
+            "top": 844
+          },
+          "page-5-I": {
+            "left": 0,
+            "width": 0,
+            "height": 0,
+            "bottom": 0,
+            "top": 0,
+            "right": 0
+          },
+          "page-0-SPAN": {
+            "width": 16,
+            "right": 601,
+            "top": 649,
+            "height": 16,
+            "bottom": 665,
+            "left": 585
+          },
+          "6-18-INPUT": {
+            "bottom": 739,
+            "left": 360,
+            "top": 718,
+            "right": 518,
+            "width": 158,
+            "height": 21
+          },
+          "6-15-INPUT": {
+            "bottom": 434,
+            "left": 344,
+            "width": 158,
+            "height": 21,
+            "top": 413,
+            "right": 502
+          },
+          "6-9-SCRIPT": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "height": 0,
+            "top": 0,
+            "width": 0
+          },
+          "6-21-SPAN": {
+            "width": 258,
+            "right": 602,
+            "left": 344,
+            "bottom": 828,
+            "top": 795,
+            "height": 33
+          },
+          "page-12-I": {
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "height": 0,
+            "width": 0
+          },
+          "6-14-INPUT": {
+            "width": 158,
+            "top": 348,
+            "height": 21,
+            "bottom": 369,
+            "right": 502,
+            "left": 344
+          },
+          "6-19-BUTTON": {
+            "left": 467,
+            "bottom": 865,
+            "width": 46,
+            "height": 21,
+            "right": 513,
+            "top": 844
+          },
+          "page-1-SPAN": {
+            "top": 802,
+            "right": 585,
+            "width": 16,
+            "height": 16,
+            "bottom": 818,
+            "left": 569
+          },
+          "6-7-SCRIPT": {
+            "height": 0,
+            "width": 0,
+            "bottom": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0
+          },
+          "6-17-INPUT": {
+            "top": 576,
+            "bottom": 597,
+            "right": 518,
+            "width": 158,
+            "left": 360,
+            "height": 21
+          },
+          "6-12-INPUT": {
+            "right": 502,
+            "width": 158,
+            "height": 21,
+            "bottom": 239,
+            "top": 218,
+            "left": 344
+          },
+          "page-15-BUTTON": {
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0
+          },
+          "6-22-HTML": {
+            "height": 1742,
+            "right": 980,
+            "top": 0,
+            "left": 0,
+            "width": 980,
+            "bottom": 1742
+          },
+          "6-1-LINK": {
+            "height": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "top": 0
+          },
+          "6-5-SCRIPT": {
+            "bottom": 0,
+            "right": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "width": 0
+          },
+          "page-4-I": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "width": 0,
+            "right": 0
+          },
+          "page-2-BUTTON": {
+            "height": 0,
+            "bottom": 0,
+            "width": 0,
+            "right": 0,
+            "top": 0,
+            "left": 0
+          },
+          "page-11-I": {
+            "bottom": 0,
+            "width": 0,
+            "top": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0
+          },
+          "6-10-DIV": {
+            "height": 0,
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "width": 0
+          },
+          "6-16-INPUT": {
+            "bottom": 532,
+            "top": 511,
+            "right": 518,
+            "height": 21,
+            "width": 158,
+            "left": 360
+          },
+          "6-3-LINK": {
+            "bottom": 0,
+            "width": 0,
+            "top": 0,
+            "height": 0,
+            "right": 0,
+            "left": 0
+          },
+          "6-13-INPUT": {
+            "top": 283,
+            "left": 344,
+            "right": 502,
+            "width": 158,
+            "height": 21,
+            "bottom": 304
+          },
+          "6-0-A": {
+            "height": 18,
+            "left": 402,
+            "top": 88,
+            "width": 176,
+            "right": 578,
+            "bottom": 106
+          },
+          "page-6-BUTTON": {
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0,
+            "width": 0
+          },
+          "page-14-BUTTON": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "width": 0
+          },
+          "6-20-SPAN": {
+            "left": 360,
+            "width": 258,
+            "top": 641,
+            "right": 618,
+            "height": 33,
+            "bottom": 674
+          },
+          "page-9-BUTTON": {
+            "left": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "bottom": 0,
+            "right": 0
+          },
+          "page-17-FORM": {
+            "height": 654,
+            "top": 174,
+            "bottom": 828,
+            "right": 636,
+            "left": 344,
+            "width": 292
+          },
+          "6-4-LINK": {
+            "bottom": 0,
+            "right": 0,
+            "top": 0,
+            "height": 0,
+            "width": 0,
+            "left": 0
+          },
+          "page-10-BUTTON": {
+            "top": 0,
+            "height": 0,
+            "right": 0,
+            "left": 0,
+            "bottom": 0,
+            "width": 0
+          },
+          "page-7-BUTTON": {
+            "bottom": 0,
+            "right": 0,
+            "width": 0,
+            "top": 0,
+            "height": 0,
+            "left": 0
+          },
+          "page-13-BUTTON": {
+            "height": 0,
+            "width": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    "timing-budget": {
+      "id": "timing-budget",
+      "title": "Timing budget",
+      "description": "Set a timing budget to help you keep an eye on the performance of your site. Performant sites load fast and respond to user input events quickly. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/budgets).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "geolocation-on-start": {
+      "id": "geolocation-on-start",
+      "title": "Avoids requesting the geolocation permission on page load",
+      "description": "Users are mistrustful of or confused by sites that request their location without context. Consider tying the request to a user action instead. [Learn more](https://web.dev/geolocation-on-start/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "inspector-issues": {
+      "id": "inspector-issues",
+      "title": "No issues in the `Issues` panel in Chrome Devtools",
+      "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      }
+    },
+    "custom-controls-labels": {
+      "id": "custom-controls-labels",
+      "title": "Custom controls have associated labels",
+      "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more](https://web.dev/custom-controls-labels/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "robots-txt": {
+      "id": "robots-txt",
+      "title": "robots.txt is valid",
+      "description": "If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. [Learn more](https://web.dev/robots-txt/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "splash-screen": {
+      "id": "splash-screen",
+      "title": "Is not configured for a custom splash screen",
+      "description": "A themed splash screen ensures a high-quality experience when users launch your app from their homescreens. [Learn more](https://web.dev/splash-screen/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "Failures: No manifest was fetched.",
+      "details": {
+        "items": [
+          {
+            "parseFailureReason": "No manifest was fetched",
+            "isParseFailure": true,
+            "failures": [
+              "No manifest was fetched"
+            ]
+          }
+        ],
+        "type": "debugdata"
+      }
+    },
+    "no-document-write": {
+      "id": "no-document-write",
+      "title": "Avoids `document.write()`",
+      "description": "For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn more](https://web.dev/no-document-write/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "type": "table",
+        "headings": []
+      }
+    },
+    "non-composited-animations": {
+      "id": "non-composited-animations",
+      "title": "Avoid non-composited animations",
+      "description": "Animations which are not composited can be janky and increase CLS. [Learn more](https://web.dev/non-composited-animations)",
+      "score": null,
+      "scoreDisplayMode": "notApplicable",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "managed-focus": {
+      "id": "managed-focus",
+      "title": "The user's focus is directed to new content added to the page",
+      "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn more](https://web.dev/managed-focus/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "is-on-https": {
+      "id": "is-on-https",
+      "title": "Uses HTTPS",
+      "description": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. This includes avoiding [mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content), where some resources are loaded over HTTP despite the initial request being served over HTTPS. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more](https://web.dev/is-on-https/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "items": [],
+        "headings": []
+      }
+    },
+    "aria-required-children": {
+      "id": "aria-required-children",
+      "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` have all required children.",
+      "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more](https://web.dev/aria-required-children/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "use-landmarks": {
+      "id": "use-landmarks",
+      "title": "HTML5 landmark elements are used to improve navigation",
+      "description": "Landmark elements (<main>, <nav>, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more](https://web.dev/use-landmarks/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "errors-in-console": {
+      "id": "errors-in-console",
+      "title": "No browser errors logged to the console",
+      "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more](https://web.dev/errors-in-console/)",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "type": "table",
+        "items": []
+      }
+    },
+    "service-worker": {
+      "id": "service-worker",
+      "title": "Does not register a service worker that controls page and `start_url`",
+      "description": "The service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. [Learn more](https://web.dev/service-worker/).",
+      "score": 0,
+      "scoreDisplayMode": "binary"
+    },
+    "meta-description": {
+      "id": "meta-description",
+      "title": "Document does not have a meta description",
+      "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more](https://web.dev/meta-description/).",
+      "score": 0,
+      "scoreDisplayMode": "binary"
+    },
+    "bootup-time": {
+      "id": "bootup-time",
+      "title": "JavaScript execution time",
+      "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://web.dev/bootup-time/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "0.4 s",
+      "details": {
+        "summary": {
+          "wastedMs": 433.26
+        },
+        "type": "table",
+        "headings": [
+          {
+            "itemType": "url",
+            "text": "URL",
+            "key": "url"
+          },
+          {
+            "granularity": 1,
+            "text": "Total CPU Time",
+            "key": "total",
+            "itemType": "ms"
+          },
+          {
+            "text": "Script Evaluation",
+            "itemType": "ms",
+            "key": "scripting",
+            "granularity": 1
+          },
+          {
+            "granularity": 1,
+            "key": "scriptParseCompile",
+            "itemType": "ms",
+            "text": "Script Parse"
+          }
+        ],
+        "items": [
+          {
+            "scripting": 321.87600000000003,
+            "scriptParseCompile": 5.78,
+            "total": 369.304,
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+          },
+          {
+            "total": 100.19199999999998,
+            "url": "https://p14-front-end-hr-net.vercel.app/",
+            "scriptParseCompile": 4.832000000000001,
+            "scripting": 11.703999999999999
+          },
+          {
+            "total": 85.01999999999998,
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+            "scriptParseCompile": 37.224,
+            "scripting": 47.06799999999999
+          },
+          {
+            "scripting": 4.776000000000001,
+            "scriptParseCompile": 0,
+            "url": "Unattributable",
+            "total": 53.36400000000002
+          }
+        ]
+      },
+      "numericValue": 433.26,
+      "numericUnit": "millisecond"
+    },
+    "viewport": {
+      "id": "viewport",
+      "title": "Does not have a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+      "description": "A `<meta name=\"viewport\">` not only optimizes your app for mobile screen sizes, but also prevents [a 300 millisecond delay to user input](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away). [Learn more](https://web.dev/viewport/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "No `<meta name=\"viewport\">` tag found"
+    },
+    "list": {
+      "id": "list",
+      "title": "Lists contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+      "description": "Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. [Learn more](https://web.dev/list/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "uses-long-cache-ttl": {
+      "id": "uses-long-cache-ttl",
+      "title": "Uses efficient cache policy on static assets",
+      "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "0 resources found",
+      "details": {
+        "summary": {
+          "wastedBytes": 0
+        },
+        "items": [],
+        "type": "table",
+        "headings": []
+      },
+      "numericValue": 0,
+      "numericUnit": "byte"
+    },
+    "uses-responsive-images": {
+      "id": "uses-responsive-images",
+      "title": "Properly size images",
+      "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn more](https://web.dev/uses-responsive-images/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "overallSavingsBytes": 0,
+        "overallSavingsMs": 0,
+        "items": [],
+        "headings": [],
+        "type": "opportunity"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "aria-required-attr": {
+      "id": "aria-required-attr",
+      "title": "`[role]`s have all required `[aria-*]` attributes",
+      "description": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more](https://web.dev/aria-required-attr/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "duplicate-id-aria": {
+      "id": "duplicate-id-aria",
+      "title": "ARIA IDs are unique",
+      "description": "The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn more](https://web.dev/duplicate-id-aria/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      }
+    },
+    "aria-allowed-attr": {
+      "id": "aria-allowed-attr",
+      "title": "`[aria-*]` attributes match their roles",
+      "description": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn more](https://web.dev/aria-allowed-attr/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "csp-xss": {
+      "id": "csp-xss",
+      "title": "Ensure CSP is effective against XSS attacks",
+      "description": "A strong Content Security Policy (CSP) significantly reduces the risk of cross-site scripting (XSS) attacks. [Learn more](https://web.dev/csp-xss/)",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "items": [
+          {
+            "severity": "High",
+            "description": "No CSP found in enforcement mode"
+          }
+        ],
+        "type": "table",
+        "headings": [
+          {
+            "text": "Description",
+            "key": "description",
+            "subItemsHeading": {
+              "key": "description"
+            },
+            "itemType": "text"
+          },
+          {
+            "text": "Directive",
+            "subItemsHeading": {
+              "key": "directive"
+            },
+            "itemType": "code",
+            "key": "directive"
+          },
+          {
+            "key": "severity",
+            "text": "Severity",
+            "subItemsHeading": {
+              "key": "severity"
+            },
+            "itemType": "text"
+          }
+        ]
+      }
+    },
+    "duplicate-id-active": {
+      "id": "duplicate-id-active",
+      "title": "`[id]` attributes on active, focusable elements are unique",
+      "description": "All focusable elements must have a unique `id` to ensure that they're visible to assistive technologies. [Learn more](https://web.dev/duplicate-id-active/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "preload-fonts": {
+      "id": "preload-fonts",
+      "title": "Fonts with `font-display: optional` are preloaded",
+      "description": "Preload `optional` fonts so first-time visitors may use them. [Learn more](https://web.dev/preload-optional-fonts/)",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "notification-on-start": {
+      "id": "notification-on-start",
+      "title": "Avoids requesting the notification permission on page load",
+      "description": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more](https://web.dev/notification-on-start/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "type": "table",
+        "items": []
+      }
+    },
+    "listitem": {
+      "id": "listitem",
+      "title": "List items (`<li>`) are contained within `<ul>` or `<ol>` parent elements",
+      "description": "Screen readers require list items (`<li>`) to be contained within a parent `<ul>` or `<ol>` to be announced properly. [Learn more](https://web.dev/listitem/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "focus-traps": {
+      "id": "focus-traps",
+      "title": "User focus is not accidentally trapped in a region",
+      "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn more](https://web.dev/focus-traps/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "frame-title": {
+      "id": "frame-title",
+      "title": "`<frame>` or `<iframe>` elements have a title",
+      "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more](https://web.dev/frame-title/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "aria-roles": {
+      "id": "aria-roles",
+      "title": "`[role]` values are valid",
+      "description": "ARIA roles must have valid values in order to perform their intended accessibility functions. [Learn more](https://web.dev/aria-roles/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "items": [],
+        "headings": []
+      }
+    },
+    "no-unload-listeners": {
+      "id": "no-unload-listeners",
+      "title": "Avoids `unload` event listeners",
+      "description": "The `unload` event does not fire reliably and listening for it can prevent browser optimizations like the Back-Forward Cache. Use `pagehide` or `visibilitychange` events instead. [Learn more](https://web.dev/bfcache/#never-use-the-unload-event)",
+      "score": 1,
+      "scoreDisplayMode": "binary"
+    },
+    "pwa-page-transitions": {
+      "id": "pwa-page-transitions",
+      "title": "Page transitions don't feel like they block on the network",
+      "description": "Transitions should feel snappy as you tap around, even on a slow network. This experience is key to a user's perception of performance. [Learn more](https://web.dev/pwa-page-transitions/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "largest-contentful-paint-element": {
+      "id": "largest-contentful-paint-element",
+      "title": "Largest Contentful Paint element",
+      "description": "This is the largest contentful element painted within the viewport. [Learn More](https://web.dev/lighthouse-largest-contentful-paint/)",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "1 element found",
+      "details": {
+        "items": [
+          {
+            "node": {
+              "lhId": "page-16-H2",
+              "type": "node",
+              "path": "0,HTML,1,BODY,1,DIV,1,H2",
+              "selector": "body > div.container > h2",
+              "nodeLabel": "Create Employee",
+              "snippet": "<h2>",
+              "boundingRect": {
+                "height": 28,
+                "bottom": 154,
+                "top": 126,
+                "width": 195,
+                "left": 393,
+                "right": 587
+              }
+            }
+          }
+        ],
+        "headings": [
+          {
+            "key": "node",
+            "text": "Element",
+            "itemType": "node"
+          }
+        ],
+        "type": "table"
+      }
+    },
+    "logical-tab-order": {
+      "id": "logical-tab-order",
+      "title": "The page has a logical tab order",
+      "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more](https://web.dev/logical-tab-order/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "document-title": {
+      "id": "document-title",
+      "title": "Document has a `<title>` element",
+      "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more](https://web.dev/document-title/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "font-display": {
+      "id": "font-display",
+      "title": "All text remains visible during webfont loads",
+      "description": "Leverage the font-display CSS feature to ensure text is user-visible while webfonts are loading. [Learn more](https://web.dev/font-display/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      },
+      "warnings": []
+    },
+    "aria-required-parent": {
+      "id": "aria-required-parent",
+      "title": "`[role]`s are contained by their required parent element",
+      "description": "Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. [Learn more](https://web.dev/aria-required-parent/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "total-byte-weight": {
+      "id": "total-byte-weight",
+      "title": "Avoids enormous network payloads",
+      "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn more](https://web.dev/total-byte-weight/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "Total size was 204 KiB",
+      "details": {
+        "items": [
+          {
+            "totalBytes": 125247,
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+          },
+          {
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+            "totalBytes": 31983
+          },
+          {
+            "totalBytes": 21083,
+            "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.full.min.js"
+          },
+          {
+            "totalBytes": 9100,
+            "url": "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+          },
+          {
+            "totalBytes": 7742,
+            "url": "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_777777_256x240.png"
+          },
+          {
+            "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.css",
+            "totalBytes": 5531
+          },
+          {
+            "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css",
+            "totalBytes": 2548
+          },
+          {
+            "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js",
+            "totalBytes": 2413
+          },
+          {
+            "totalBytes": 1673,
+            "url": "https://p14-front-end-hr-net.vercel.app/app.js"
+          },
+          {
+            "totalBytes": 1216,
+            "url": "https://p14-front-end-hr-net.vercel.app/"
+          }
+        ],
+        "type": "table",
+        "headings": [
+          {
+            "text": "URL",
+            "itemType": "url",
+            "key": "url"
+          },
+          {
+            "itemType": "bytes",
+            "text": "Transfer Size",
+            "key": "totalBytes"
+          }
+        ]
+      },
+      "numericValue": 209339,
+      "numericUnit": "byte"
+    },
+    "aria-command-name": {
+      "id": "aria-command-name",
+      "title": "`button`, `link`, and `menuitem` elements have accessible names",
+      "description": "When an element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "network-rtt": {
+      "id": "network-rtt",
+      "title": "Network Round Trip Times",
+      "description": "Network round trip times (RTT) have a large impact on performance. If the RTT to an origin is high, it's an indication that servers closer to the user could improve performance. [Learn more](https://hpbn.co/primer-on-latency-and-bandwidth/).",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "0 ms",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "maskable-icon": {
+      "id": "maskable-icon",
+      "title": "Manifest doesn't have a maskable icon",
+      "description": "A maskable icon ensures that the image fills the entire shape without being letterboxed when installing the app on a device. [Learn more](https://web.dev/maskable-icon-audit/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "No manifest was fetched"
+    },
+    "interactive-element-affordance": {
+      "id": "interactive-element-affordance",
+      "title": "Interactive elements indicate their purpose and state",
+      "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn more](https://web.dev/interactive-element-affordance/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "resource-summary": {
+      "id": "resource-summary",
+      "title": "Keep request counts low and transfer sizes small",
+      "description": "To set budgets for the quantity and size of page resources, add a budget.json file. [Learn more](https://web.dev/use-lighthouse-for-performance-budgets/).",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "11 requests • 204 KiB",
+      "details": {
+        "headings": [
+          {
+            "text": "Resource Type",
+            "itemType": "text",
+            "key": "label"
+          },
+          {
+            "itemType": "numeric",
+            "key": "requestCount",
+            "text": "Requests"
+          },
+          {
+            "itemType": "bytes",
+            "key": "transferSize",
+            "text": "Transfer Size"
+          }
+        ],
+        "type": "table",
+        "items": [
+          {
+            "transferSize": 209339,
+            "label": "Total",
+            "requestCount": 11,
+            "resourceType": "total"
+          },
+          {
+            "resourceType": "script",
+            "requestCount": 5,
+            "label": "Script",
+            "transferSize": 182399
+          },
+          {
+            "resourceType": "stylesheet",
+            "transferSize": 17982,
+            "requestCount": 4,
+            "label": "Stylesheet"
+          },
+          {
+            "label": "Image",
+            "transferSize": 7742,
+            "requestCount": 1,
+            "resourceType": "image"
+          },
+          {
+            "transferSize": 1216,
+            "requestCount": 1,
+            "resourceType": "document",
+            "label": "Document"
+          },
+          {
+            "label": "Media",
+            "transferSize": 0,
+            "requestCount": 0,
+            "resourceType": "media"
+          },
+          {
+            "requestCount": 0,
+            "resourceType": "font",
+            "transferSize": 0,
+            "label": "Font"
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "transferSize": 0,
+            "requestCount": 0
+          },
+          {
+            "requestCount": 6,
+            "resourceType": "third-party",
+            "transferSize": 179033,
+            "label": "Third-party"
+          }
+        ]
+      }
+    },
+    "js-libraries": {
+      "id": "js-libraries",
+      "title": "Detected JavaScript libraries",
+      "description": "All front-end JavaScript libraries detected on the page. [Learn more](https://web.dev/js-libraries/).",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "debugData": {
+          "stacks": [
+            {
+              "version": "3.5.1",
+              "id": "jquery"
+            },
+            {
+              "id": "jquery-fast"
+            },
+            {
+              "version": "1.12.1",
+              "id": "jquery_ui"
+            }
+          ],
+          "type": "debugdata"
+        },
+        "headings": [
+          {
+            "key": "name",
+            "itemType": "text",
+            "text": "Name"
+          },
+          {
+            "key": "version",
+            "text": "Version",
+            "itemType": "text"
+          }
+        ],
+        "summary": {},
+        "type": "table",
+        "items": [
+          {
+            "version": "3.5.1",
+            "name": "jQuery",
+            "npm": "jquery"
+          },
+          {
+            "version": "1.12.1",
+            "name": "jQuery UI",
+            "npm": "jquery-ui"
+          }
+        ]
+      }
+    },
+    "no-vulnerable-libraries": {
+      "id": "no-vulnerable-libraries",
+      "title": "Includes front-end JavaScript libraries with known security vulnerabilities",
+      "description": "Some third-party scripts may contain known security vulnerabilities that are easily identified and exploited by attackers. [Learn more](https://web.dev/no-vulnerable-libraries/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "displayValue": "3 vulnerabilities detected",
+      "details": {
+        "type": "table",
+        "items": [
+          {
+            "highestSeverity": "High",
+            "detectedLib": {
+              "url": "https://snyk.io/vuln/npm:jquery-ui?lh=1.12.1&utm_source=lighthouse&utm_medium=ref&utm_campaign=audit",
+              "type": "link",
+              "text": "jQuery UI@1.12.1"
+            },
+            "vulnCount": 3
+          }
+        ],
+        "summary": {},
+        "headings": [
+          {
+            "key": "detectedLib",
+            "text": "Library Version",
+            "itemType": "link"
+          },
+          {
+            "text": "Vulnerability Count",
+            "itemType": "text",
+            "key": "vulnCount"
+          },
+          {
+            "key": "highestSeverity",
+            "itemType": "text",
+            "text": "Highest Severity"
+          }
+        ]
+      }
+    },
+    "focusable-controls": {
+      "id": "focusable-controls",
+      "title": "Interactive controls are keyboard focusable",
+      "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn more](https://web.dev/focusable-controls/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "unminified-javascript": {
+      "id": "unminified-javascript",
+      "title": "Minify JavaScript",
+      "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn more](https://web.dev/unminified-javascript/).",
+      "score": 0.75,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "Potential savings of 44 KiB",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 300,
+        "headings": [
+          {
+            "label": "URL",
+            "valueType": "url",
+            "key": "url"
+          },
+          {
+            "valueType": "bytes",
+            "label": "Transfer Size",
+            "key": "totalBytes"
+          },
+          {
+            "valueType": "bytes",
+            "label": "Potential Savings",
+            "key": "wastedBytes"
+          }
+        ],
+        "overallSavingsBytes": 45156,
+        "items": [
+          {
+            "totalBytes": 125247,
+            "wastedBytes": 45156,
+            "wastedPercent": 36.053188506550626,
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+          }
+        ]
+      },
+      "warnings": [],
+      "numericValue": 300,
+      "numericUnit": "millisecond"
+    },
+    "aria-hidden-body": {
+      "id": "aria-hidden-body",
+      "title": "`[aria-hidden=\"true\"]` is not present on the document `<body>`",
+      "description": "Assistive technologies, like screen readers, work inconsistently when `aria-hidden=\"true\"` is set on the document `<body>`. [Learn more](https://web.dev/aria-hidden-body/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "custom-controls-roles": {
+      "id": "custom-controls-roles",
+      "title": "Custom controls have ARIA roles",
+      "description": "Custom interactive controls have appropriate ARIA roles. [Learn more](https://web.dev/custom-control-roles/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "http-status-code": {
+      "id": "http-status-code",
+      "title": "Page has successful HTTP status code",
+      "description": "Pages with unsuccessful HTTP status codes may not be indexed properly. [Learn more](https://web.dev/http-status-code/).",
+      "score": 1,
+      "scoreDisplayMode": "binary"
+    },
+    "content-width": {
+      "id": "content-width",
+      "title": "Content is not sized correctly for the viewport",
+      "description": "If the width of your app's content doesn't match the width of the viewport, your app might not be optimized for mobile screens. [Learn more](https://web.dev/content-width/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "The viewport size of 980px does not match the window size of 360px."
+    },
+    "pwa-cross-browser": {
+      "id": "pwa-cross-browser",
+      "title": "Site works cross-browser",
+      "description": "To reach the most number of users, sites should work across every major browser. [Learn more](https://web.dev/pwa-cross-browser/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "unused-css-rules": {
+      "id": "unused-css-rules",
+      "title": "Reduce unused CSS",
+      "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn more](https://web.dev/unused-css-rules/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "overallSavingsMs": 0,
+        "items": [],
+        "overallSavingsBytes": 0,
+        "type": "opportunity",
+        "headings": []
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "aria-hidden-focus": {
+      "id": "aria-hidden-focus",
+      "title": "`[aria-hidden=\"true\"]` elements do not contain focusable descendents",
+      "description": "Focusable descendents within an `[aria-hidden=\"true\"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn more](https://web.dev/aria-hidden-focus/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "plugins": {
+      "id": "plugins",
+      "title": "Document avoids plugins",
+      "description": "Search engines can't index plugin content, and many devices restrict plugins or don't support them. [Learn more](https://web.dev/plugins/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      }
+    },
+    "aria-treeitem-name": {
+      "id": "aria-treeitem-name",
+      "title": "ARIA `treeitem` elements have accessible names",
+      "description": "When an element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "offscreen-images": {
+      "id": "offscreen-images",
+      "title": "Defer offscreen images",
+      "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn more](https://web.dev/offscreen-images/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "type": "opportunity",
+        "headings": [],
+        "items": [],
+        "overallSavingsMs": 0,
+        "overallSavingsBytes": 0
+      },
+      "warnings": [],
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "third-party-summary": {
+      "id": "third-party-summary",
+      "title": "Minimize third-party usage",
+      "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn more](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "displayValue": "Third-party code blocked the main thread for 150 ms",
+      "details": {
+        "headings": [
+          {
+            "subItemsHeading": {
+              "itemType": "url",
+              "key": "url"
+            },
+            "key": "entity",
+            "itemType": "link",
+            "text": "Third-Party"
+          },
+          {
+            "key": "transferSize",
+            "itemType": "bytes",
+            "granularity": 1,
+            "text": "Transfer Size",
+            "subItemsHeading": {
+              "key": "transferSize"
+            }
+          },
+          {
+            "text": "Main-Thread Blocking Time",
+            "itemType": "ms",
+            "key": "blockingTime",
+            "subItemsHeading": {
+              "key": "blockingTime"
+            },
+            "granularity": 1
+          }
+        ],
+        "type": "table",
+        "summary": {
+          "wastedMs": 153.94799999999998,
+          "wastedBytes": 179033
+        },
+        "items": [
+          {
+            "blockingTime": 153.94799999999998,
+            "mainThreadTime": 369.30400000000037,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+                  "mainThreadTime": 369.30400000000037,
+                  "blockingTime": 153.94799999999998,
+                  "transferSize": 31983
+                }
+              ]
+            },
+            "transferSize": 31983,
+            "entity": {
+              "text": "Google CDN",
+              "type": "link",
+              "url": "https://developers.google.com/speed/libraries/"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+                  "transferSize": 125247,
+                  "blockingTime": 0,
+                  "mainThreadTime": 85.02
+                },
+                {
+                  "url": "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",
+                  "mainThreadTime": 0,
+                  "blockingTime": 0,
+                  "transferSize": 9100
+                },
+                {
+                  "blockingTime": 0,
+                  "url": "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_777777_256x240.png",
+                  "mainThreadTime": 0,
+                  "transferSize": 7742
+                }
+              ]
+            },
+            "transferSize": 142089,
+            "blockingTime": 0,
+            "entity": {
+              "url": "https://code.jquery.com/",
+              "text": "jQuery CDN",
+              "type": "link"
+            },
+            "mainThreadTime": 85.02
+          },
+          {
+            "mainThreadTime": 6.76,
+            "transferSize": 4961,
+            "blockingTime": 0,
+            "subItems": {
+              "type": "subitems",
+              "items": []
+            },
+            "entity": {
+              "type": "link",
+              "text": "Cloudflare CDN",
+              "url": "https://cdnjs.com/"
+            }
+          }
+        ]
+      }
+    },
+    "aria-valid-attr-value": {
+      "id": "aria-valid-attr-value",
+      "title": "`[aria-*]` attributes have valid values",
+      "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid values. [Learn more](https://web.dev/aria-valid-attr-value/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "legacy-javascript": {
+      "id": "legacy-javascript",
+      "title": "Avoid serving legacy JavaScript to modern browsers",
+      "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. [Learn More](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "items": [],
+        "type": "opportunity",
+        "overallSavingsBytes": 0,
+        "overallSavingsMs": 0,
+        "headings": []
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "main-thread-tasks": {
+      "id": "main-thread-tasks",
+      "title": "Tasks",
+      "description": "Lists the toplevel main thread tasks that executed during page load.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "type": "table",
+        "items": [
+          {
+            "duration": 9.267,
+            "startTime": 41.906
+          },
+          {
+            "startTime": 59.22,
+            "duration": 11.056
+          },
+          {
+            "startTime": 106.221,
+            "duration": 25.075
+          },
+          {
+            "startTime": 131.305,
+            "duration": 7.973
+          },
+          {
+            "startTime": 140.649,
+            "duration": 55.593
+          },
+          {
+            "duration": 16.085,
+            "startTime": 198.913
+          },
+          {
+            "duration": 7.487,
+            "startTime": 216.123
+          }
+        ],
+        "headings": [
+          {
+            "key": "startTime",
+            "itemType": "ms",
+            "text": "Start Time",
+            "granularity": 1
+          },
+          {
+            "text": "End Time",
+            "itemType": "ms",
+            "key": "duration",
+            "granularity": 1
+          }
+        ]
+      }
+    },
+    "font-size": {
+      "id": "font-size",
+      "title": "Document doesn't use legible font sizes",
+      "description": "Font sizes less than 12px are too small to be legible and require mobile visitors to “pinch to zoom” in order to read. Strive to have >60% of page text ≥12px. [Learn more](https://web.dev/font-size/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "Text is illegible because there's no viewport meta tag optimized for mobile screens."
+    },
+    "unsized-images": {
+      "id": "unsized-images",
+      "title": "Image elements have explicit `width` and `height`",
+      "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn more](https://web.dev/optimize-cls/#images-without-dimensions)",
+      "score": null,
+      "scoreDisplayMode": "notApplicable",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "charset": {
+      "id": "charset",
+      "title": "Properly defines charset",
+      "description": "A character encoding declaration is required. It can be done with a `<meta>` tag in the first 1024 bytes of the HTML or in the Content-Type HTTP response header. [Learn more](https://web.dev/charset/).",
+      "score": 1,
+      "scoreDisplayMode": "binary"
+    },
+    "redirects": {
+      "id": "redirects",
+      "title": "Avoid multiple page redirects",
+      "description": "Redirects introduce additional delays before the page can be loaded. [Learn more](https://web.dev/redirects/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "type": "opportunity",
+        "headings": [],
+        "overallSavingsMs": 0,
+        "items": []
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "td-headers-attr": {
+      "id": "td-headers-attr",
+      "title": "Cells in a `<table>` element that use the `[headers]` attribute refer to table cells within the same table.",
+      "description": "Screen readers have features to make navigating tables easier. Ensuring `<td>` cells using the `[headers]` attribute only refer to other cells in the same table may improve the experience for screen reader users. [Learn more](https://web.dev/td-headers-attr/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "user-timings": {
+      "id": "user-timings",
+      "title": "User Timing marks and measures",
+      "description": "Consider instrumenting your app with the User Timing API to measure your app's real-world performance during key user experiences. [Learn more](https://web.dev/user-timings/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      }
+    },
+    "crawlable-anchors": {
+      "id": "crawlable-anchors",
+      "title": "Links are crawlable",
+      "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn More](https://support.google.com/webmasters/answer/9112205)",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "type": "table",
+        "headings": []
+      }
+    },
+    "is-crawlable": {
+      "id": "is-crawlable",
+      "title": "Page isn’t blocked from indexing",
+      "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more](https://web.dev/is-crawable/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "network-requests": {
+      "id": "network-requests",
+      "title": "Network Requests",
+      "description": "Lists the network requests that were made during page load.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "itemType": "url",
+            "key": "url",
+            "text": "URL"
+          },
+          {
+            "key": "protocol",
+            "text": "Protocol",
+            "itemType": "text"
+          },
+          {
+            "itemType": "ms",
+            "granularity": 1,
+            "text": "Start Time",
+            "key": "startTime"
+          },
+          {
+            "granularity": 1,
+            "itemType": "ms",
+            "text": "End Time",
+            "key": "endTime"
+          },
+          {
+            "itemType": "bytes",
+            "text": "Transfer Size",
+            "key": "transferSize",
+            "granularity": 1,
+            "displayUnit": "kb"
+          },
+          {
+            "displayUnit": "kb",
+            "key": "resourceSize",
+            "text": "Resource Size",
+            "granularity": 1,
+            "itemType": "bytes"
+          },
+          {
+            "key": "statusCode",
+            "text": "Status Code",
+            "itemType": "text"
+          },
+          {
+            "text": "MIME Type",
+            "itemType": "text",
+            "key": "mimeType"
+          },
+          {
+            "itemType": "text",
+            "key": "resourceType",
+            "text": "Resource Type"
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "networkStartTimeTs": 781191037424
+        },
+        "items": [
+          {
+            "endTime": 37.46600006707013,
+            "resourceSize": 2642,
+            "startTime": 0,
+            "mimeType": "text/html",
+            "finished": true,
+            "protocol": "h2",
+            "resourceType": "Document",
+            "transferSize": 1216,
+            "url": "https://p14-front-end-hr-net.vercel.app/",
+            "experimentalFromMainFrame": true,
+            "statusCode": 200
+          },
+          {
+            "endTime": 51.556000020354986,
+            "statusCode": 200,
+            "experimentalFromMainFrame": true,
+            "startTime": 46.05900007300079,
+            "protocol": "h2",
+            "mimeType": "text/javascript",
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+            "resourceSize": 89476,
+            "resourceType": "Script",
+            "transferSize": 31983,
+            "finished": true
+          },
+          {
+            "mimeType": "application/javascript",
+            "transferSize": 21083,
+            "resourceType": "Script",
+            "endTime": 76.8470000475645,
+            "protocol": "h2",
+            "finished": true,
+            "resourceSize": 60819,
+            "statusCode": 200,
+            "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.full.min.js",
+            "experimentalFromMainFrame": true,
+            "startTime": 46.49300000164658
+          },
+          {
+            "resourceSize": 18419,
+            "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.css",
+            "finished": true,
+            "statusCode": 200,
+            "protocol": "h2",
+            "transferSize": 5531,
+            "mimeType": "text/css",
+            "experimentalFromMainFrame": true,
+            "resourceType": "Stylesheet",
+            "startTime": 46.57100001350045,
+            "endTime": 101.79099999368191
+          },
+          {
+            "finished": true,
+            "experimentalFromMainFrame": true,
+            "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js",
+            "resourceSize": 4953,
+            "mimeType": "application/javascript",
+            "resourceType": "Script",
+            "startTime": 46.76499997731298,
+            "endTime": 63.05600004270673,
+            "transferSize": 2413,
+            "statusCode": 200,
+            "protocol": "h2"
+          },
+          {
+            "mimeType": "text/css",
+            "finished": true,
+            "statusCode": 200,
+            "experimentalFromMainFrame": true,
+            "endTime": 62.68199998885393,
+            "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css",
+            "resourceSize": 3201,
+            "resourceType": "Stylesheet",
+            "protocol": "h2",
+            "startTime": 47.27400001138449,
+            "transferSize": 2548
+          },
+          {
+            "endTime": 66.61900004837662,
+            "resourceSize": 520714,
+            "transferSize": 125247,
+            "mimeType": "application/javascript",
+            "experimentalFromMainFrame": true,
+            "resourceType": "Script",
+            "finished": true,
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+            "statusCode": 200,
+            "startTime": 47.62299999129027,
+            "protocol": "h2"
+          },
+          {
+            "finished": true,
+            "experimentalFromMainFrame": true,
+            "mimeType": "text/css",
+            "startTime": 47.697999980300665,
+            "url": "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",
+            "endTime": 60.253000003285706,
+            "statusCode": 200,
+            "resourceSize": 35973,
+            "protocol": "h2",
+            "resourceType": "Stylesheet",
+            "transferSize": 9100
+          },
+          {
+            "url": "https://p14-front-end-hr-net.vercel.app/app.js",
+            "resourceType": "Script",
+            "transferSize": 1673,
+            "finished": true,
+            "startTime": 47.85700002685189,
+            "mimeType": "application/javascript",
+            "experimentalFromMainFrame": true,
+            "endTime": 92.38200006075203,
+            "resourceSize": 5887,
+            "statusCode": 200,
+            "protocol": "h2"
+          },
+          {
+            "resourceSize": 315,
+            "finished": true,
+            "transferSize": 803,
+            "mimeType": "text/css",
+            "resourceType": "Stylesheet",
+            "endTime": 83.24399997945875,
+            "experimentalFromMainFrame": true,
+            "startTime": 48.9229999948293,
+            "protocol": "h2",
+            "url": "https://p14-front-end-hr-net.vercel.app/app.css",
+            "statusCode": 200
+          },
+          {
+            "protocol": "h2",
+            "transferSize": 7742,
+            "startTime": 162.42399998009205,
+            "url": "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_777777_256x240.png",
+            "experimentalFromMainFrame": true,
+            "mimeType": "image/png",
+            "resourceType": "Image",
+            "statusCode": 200,
+            "resourceSize": 7013,
+            "finished": true,
+            "endTime": 171.7369999969378
+          }
+        ]
+      }
+    },
+    "valid-lang": {
+      "id": "valid-lang",
+      "title": "`[lang]` attributes have a valid value",
+      "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) on elements helps ensure that text is pronounced correctly by a screen reader. [Learn more](https://web.dev/valid-lang/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "tabindex": {
+      "id": "tabindex",
+      "title": "No element has a `[tabindex]` value greater than 0",
+      "description": "A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. [Learn more](https://web.dev/tabindex/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "offscreen-content-hidden": {
+      "id": "offscreen-content-hidden",
+      "title": "Offscreen content is hidden from assistive technology",
+      "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn more](https://web.dev/offscreen-content-hidden/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "html-lang-valid": {
+      "id": "html-lang-valid",
+      "title": "`<html>` element has a valid value for its `[lang]` attribute",
+      "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) helps screen readers announce text properly. [Learn more](https://web.dev/html-lang-valid/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "script-treemap-data": {
+      "id": "script-treemap-data",
+      "title": "Script Treemap Data",
+      "description": "Used for treemap app",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "type": "treemap-data",
+        "nodes": [
+          {
+            "resourceBytes": 89476,
+            "name": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+            "unusedBytes": 38639
+          },
+          {
+            "resourceBytes": 57400,
+            "name": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.full.min.js",
+            "unusedBytes": 21417
+          },
+          {
+            "name": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js",
+            "resourceBytes": 4953,
+            "unusedBytes": 3676
+          },
+          {
+            "unusedBytes": 422461,
+            "name": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+            "resourceBytes": 520714
+          },
+          {
+            "resourceBytes": 5887,
+            "unusedBytes": 1082,
+            "name": "https://p14-front-end-hr-net.vercel.app/app.js"
+          }
+        ]
+      }
+    },
+    "uses-text-compression": {
+      "id": "uses-text-compression",
+      "title": "Enable text compression",
+      "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more](https://web.dev/uses-text-compression/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "overallSavingsMs": 0,
+        "overallSavingsBytes": 0,
+        "items": [],
+        "headings": [],
+        "type": "opportunity"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "efficient-animated-content": {
+      "id": "efficient-animated-content",
+      "title": "Use video formats for animated content",
+      "description": "Large GIFs are inefficient for delivering animated content. Consider using MPEG4/WebM videos for animations and PNG/WebP for static images instead of GIF to save network bytes. [Learn more](https://web.dev/efficient-animated-content/)",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "headings": [],
+        "items": [],
+        "overallSavingsMs": 0,
+        "type": "opportunity",
+        "overallSavingsBytes": 0
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "total-blocking-time": {
+      "id": "total-blocking-time",
+      "title": "Total Blocking Time",
+      "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more](https://web.dev/lighthouse-total-blocking-time/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "30 ms",
+      "numericValue": 25,
+      "numericUnit": "millisecond"
+    },
+    "largest-contentful-paint": {
+      "id": "largest-contentful-paint",
+      "title": "Largest Contentful Paint",
+      "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more](https://web.dev/lighthouse-largest-contentful-paint/)",
+      "score": 0.83,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "2.8 s",
+      "numericValue": 2785,
+      "numericUnit": "millisecond"
+    },
+    "aria-tooltip-name": {
+      "id": "aria-tooltip-name",
+      "title": "ARIA `tooltip` elements have accessible names",
+      "description": "When an element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "server-response-time": {
+      "id": "server-response-time",
+      "title": "Initial server response time was short",
+      "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more](https://web.dev/time-to-first-byte/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "displayValue": "Root document took 40 ms",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": -61.549,
+        "items": [
+          {
+            "responseTime": 38.451,
+            "url": "https://p14-front-end-hr-net.vercel.app/"
+          }
+        ],
+        "headings": [
+          {
+            "label": "URL",
+            "key": "url",
+            "valueType": "url"
+          },
+          {
+            "key": "responseTime",
+            "valueType": "timespanMs",
+            "label": "Time Spent"
+          }
+        ]
+      },
+      "numericValue": 38.451,
+      "numericUnit": "millisecond"
+    },
+    "visual-order-follows-dom": {
+      "id": "visual-order-follows-dom",
+      "title": "Visual order on the page follows DOM order",
+      "description": "DOM order matches the visual order, improving navigation for assistive technology. [Learn more](https://web.dev/visual-order-follows-dom/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "valid-source-maps": {
+      "id": "valid-source-maps",
+      "title": "Page has valid source maps",
+      "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "accesskeys": {
+      "id": "accesskeys",
+      "title": "`[accesskey]` values are unique",
+      "description": "Access keys let users quickly focus a part of the page. For proper navigation, each access key must be unique. [Learn more](https://web.dev/accesskeys/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "first-meaningful-paint": {
+      "id": "first-meaningful-paint",
+      "title": "First Meaningful Paint",
+      "description": "First Meaningful Paint measures when the primary content of a page is visible. [Learn more](https://web.dev/first-meaningful-paint/).",
+      "score": 0.8,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "2.8 s",
+      "numericValue": 2785,
+      "numericUnit": "millisecond"
+    },
+    "preload-lcp-image": {
+      "id": "preload-lcp-image",
+      "title": "Preload Largest Contentful Paint image",
+      "description": "Preload the image used by the LCP element in order to improve your LCP time. [Learn more](https://web.dev/optimize-lcp/#preload-important-resources).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "type": "opportunity",
+        "headings": [],
+        "items": [],
+        "overallSavingsMs": 0
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "canonical": {
+      "id": "canonical",
+      "title": "Document has a valid `rel=canonical`",
+      "description": "Canonical links suggest which URL to show in search results. [Learn more](https://web.dev/canonical/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "speed-index": {
+      "id": "speed-index",
+      "title": "Speed Index",
+      "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://web.dev/speed-index/).",
+      "score": 0.96,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "2.7 s",
+      "numericValue": 2710,
+      "numericUnit": "millisecond"
+    },
+    "mainthread-work-breakdown": {
+      "id": "mainthread-work-breakdown",
+      "title": "Minimizes main-thread work",
+      "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://web.dev/mainthread-work-breakdown/)",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "0.6 s",
+      "details": {
+        "type": "table",
+        "items": [
+          {
+            "duration": 399.5560000000002,
+            "groupLabel": "Script Evaluation",
+            "group": "scriptEvaluation"
+          },
+          {
+            "duration": 88.15600000000005,
+            "group": "other",
+            "groupLabel": "Other"
+          },
+          {
+            "duration": 53.852,
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation"
+          },
+          {
+            "duration": 41.02,
+            "groupLabel": "Style & Layout",
+            "group": "styleLayout"
+          },
+          {
+            "duration": 39.69199999999999,
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML"
+          },
+          {
+            "groupLabel": "Rendering",
+            "duration": 11.452,
+            "group": "paintCompositeRender"
+          }
+        ],
+        "headings": [
+          {
+            "text": "Category",
+            "itemType": "text",
+            "key": "groupLabel"
+          },
+          {
+            "text": "Time Spent",
+            "itemType": "ms",
+            "granularity": 1,
+            "key": "duration"
+          }
+        ]
+      },
+      "numericValue": 633.7280000000003,
+      "numericUnit": "millisecond"
+    },
+    "unused-javascript": {
+      "id": "unused-javascript",
+      "title": "Reduce unused JavaScript",
+      "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn more](https://web.dev/unused-javascript/).",
+      "score": 0.62,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "Potential savings of 99 KiB",
+      "details": {
+        "overallSavingsMs": 530,
+        "overallSavingsBytes": 101614,
+        "headings": [
+          {
+            "subItemsHeading": {
+              "valueType": "code",
+              "key": "source"
+            },
+            "valueType": "url",
+            "label": "URL",
+            "key": "url"
+          },
+          {
+            "label": "Transfer Size",
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "subItemsHeading": {
+              "key": "sourceBytes"
+            }
+          },
+          {
+            "key": "wastedBytes",
+            "valueType": "bytes",
+            "label": "Potential Savings",
+            "subItemsHeading": {
+              "key": "sourceWastedBytes"
+            }
+          }
+        ],
+        "type": "opportunity",
+        "items": [
+          {
+            "wastedPercent": 81.13110075780563,
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+            "totalBytes": 125247,
+            "wastedBytes": 101614
+          }
+        ]
+      },
+      "numericValue": 530,
+      "numericUnit": "millisecond"
+    },
+    "link-text": {
+      "id": "link-text",
+      "title": "Links have descriptive text",
+      "description": "Descriptive link text helps search engines understand your content. [Learn more](https://web.dev/link-text/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "summary": {},
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "critical-request-chains": {
+      "id": "critical-request-chains",
+      "title": "Avoid chaining critical requests",
+      "description": "The Critical Request Chains below show you what resources are loaded with a high priority. Consider reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load. [Learn more](https://web.dev/critical-request-chains/).",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "9 chains found",
+      "details": {
+        "type": "criticalrequestchain",
+        "longestChain": {
+          "length": 2,
+          "duration": 101.79099999368191,
+          "transferSize": 5531
+        },
+        "chains": {
+          "1C681CA2E2DD5E3030ED94353D5C51C1": {
+            "request": {
+              "endTime": 781191.07489,
+              "responseReceivedTime": 781191.0748749999,
+              "url": "https://p14-front-end-hr-net.vercel.app/",
+              "startTime": 781191.037424,
+              "transferSize": 1216
+            },
+            "children": {
+              "29.9": {
+                "request": {
+                  "endTime": 781191.129806,
+                  "startTime": 781191.085281,
+                  "responseReceivedTime": 781191.129799,
+                  "transferSize": 1673,
+                  "url": "https://p14-front-end-hr-net.vercel.app/app.js"
+                }
+              },
+              "29.3": {
+                "request": {
+                  "responseReceivedTime": 781191.114265,
+                  "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.full.min.js",
+                  "startTime": 781191.083917,
+                  "transferSize": 21083,
+                  "endTime": 781191.114271
+                }
+              },
+              "29.7": {
+                "request": {
+                  "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+                  "startTime": 781191.085047,
+                  "responseReceivedTime": 781191.104035,
+                  "endTime": 781191.104043,
+                  "transferSize": 125247
+                }
+              },
+              "29.5": {
+                "request": {
+                  "transferSize": 2413,
+                  "endTime": 781191.10048,
+                  "startTime": 781191.084189,
+                  "responseReceivedTime": 781191.100477,
+                  "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
+                }
+              },
+              "29.8": {
+                "request": {
+                  "responseReceivedTime": 781191.097672,
+                  "url": "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",
+                  "startTime": 781191.085122,
+                  "transferSize": 9100,
+                  "endTime": 781191.097677
+                }
+              },
+              "29.10": {
+                "request": {
+                  "url": "https://p14-front-end-hr-net.vercel.app/app.css",
+                  "endTime": 781191.120668,
+                  "responseReceivedTime": 781191.120662,
+                  "transferSize": 803,
+                  "startTime": 781191.086347
+                }
+              },
+              "29.6": {
+                "request": {
+                  "transferSize": 2548,
+                  "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css",
+                  "endTime": 781191.100106,
+                  "responseReceivedTime": 781191.100099,
+                  "startTime": 781191.084698
+                }
+              },
+              "29.4": {
+                "request": {
+                  "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.css",
+                  "transferSize": 5531,
+                  "startTime": 781191.083995,
+                  "endTime": 781191.139215,
+                  "responseReceivedTime": 781191.139208
+                }
+              },
+              "29.2": {
+                "request": {
+                  "startTime": 781191.083483,
+                  "endTime": 781191.08898,
+                  "responseReceivedTime": 781191.0889730001,
+                  "transferSize": 31983,
+                  "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "doctype": {
+      "id": "doctype",
+      "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+      "description": "Specifying a doctype prevents the browser from switching to quirks-mode. [Learn more](https://web.dev/doctype/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "Document must contain a doctype"
+    },
+    "th-has-data-cells": {
+      "id": "th-has-data-cells",
+      "title": "`<th>` elements and elements with `[role=\"columnheader\"/\"rowheader\"]` have data cells they describe.",
+      "description": "Screen readers have features to make navigating tables easier. Ensuring table headers always refer to some set of cells may improve the experience for screen reader users. [Learn more](https://web.dev/th-has-data-cells/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "label": {
+      "id": "label",
+      "title": "Form elements have associated labels",
+      "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more](https://web.dev/label/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "headings": [],
+        "type": "table"
+      }
+    },
+    "hreflang": {
+      "id": "hreflang",
+      "title": "Document has a valid `hreflang`",
+      "description": "hreflang links tell search engines what version of a page they should list in search results for a given language or region. [Learn more](https://web.dev/hreflang/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "type": "table",
+        "headings": []
+      }
+    },
+    "uses-optimized-images": {
+      "id": "uses-optimized-images",
+      "title": "Efficiently encode images",
+      "description": "Optimized images load faster and consume less cellular data. [Learn more](https://web.dev/uses-optimized-images/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "headings": [],
+        "items": [],
+        "overallSavingsBytes": 0,
+        "type": "opportunity",
+        "overallSavingsMs": 0
+      },
+      "warnings": [],
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "image-alt": {
+      "id": "image-alt",
+      "title": "Image elements have `[alt]` attributes",
+      "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "aria-toggle-field-name": {
+      "id": "aria-toggle-field-name",
+      "title": "ARIA toggle fields have accessible names",
+      "description": "When a toggle field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "meta-refresh": {
+      "id": "meta-refresh",
+      "title": "The document does not use `<meta http-equiv=\"refresh\">`",
+      "description": "Users do not expect a page to refresh automatically, and doing so will move focus back to the top of the page. This may create a frustrating or confusing experience. [Learn more](https://web.dev/meta-refresh/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "cumulative-layout-shift": {
+      "id": "cumulative-layout-shift",
+      "title": "Cumulative Layout Shift",
+      "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more](https://web.dev/cls/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "0.003",
+      "details": {
+        "items": [
+          {
+            "totalCumulativeLayoutShift": 0.0032817373552257133,
+            "cumulativeLayoutShiftMainFrame": 0.0032817373552257133
+          }
+        ],
+        "type": "debugdata"
+      },
+      "numericValue": 0.0032817373552257133,
+      "numericUnit": "unitless"
+    },
+    "apple-touch-icon": {
+      "id": "apple-touch-icon",
+      "title": "Does not provide a valid `apple-touch-icon`",
+      "description": "For ideal appearance on iOS when users add a progressive web app to the home screen, define an `apple-touch-icon`. It must point to a non-transparent 192px (or 180px) square PNG. [Learn More](https://web.dev/apple-touch-icon/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "warnings": []
+    },
+    "aria-progressbar-name": {
+      "id": "aria-progressbar-name",
+      "title": "ARIA `progressbar` elements have accessible names",
+      "description": "When a `progressbar` element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "bypass": {
+      "id": "bypass",
+      "title": "The page contains a heading, skip link, or landmark region",
+      "description": "Adding ways to bypass repetitive content lets keyboard users navigate the page more efficiently. [Learn more](https://web.dev/bypass/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "link-name": {
+      "id": "link-name",
+      "title": "Links have a discernible name",
+      "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn more](https://web.dev/link-name/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "type": "table",
+        "items": []
+      }
+    },
+    "dlitem": {
+      "id": "dlitem",
+      "title": "Definition list items are wrapped in `<dl>` elements",
+      "description": "Definition list items (`<dt>` and `<dd>`) must be wrapped in a parent `<dl>` element to ensure that screen readers can properly announce them. [Learn more](https://web.dev/dlitem/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "long-tasks": {
+      "id": "long-tasks",
+      "title": "Avoid long main-thread tasks",
+      "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn more](https://web.dev/long-tasks-devtools/)",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "3 long tasks found",
+      "details": {
+        "items": [
+          {
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+            "startTime": 2054,
+            "duration": 111
+          },
+          {
+            "startTime": 2760,
+            "duration": 100,
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+          },
+          {
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+            "duration": 64,
+            "startTime": 2165
+          }
+        ],
+        "type": "table",
+        "headings": [
+          {
+            "itemType": "url",
+            "key": "url",
+            "text": "URL"
+          },
+          {
+            "itemType": "ms",
+            "key": "startTime",
+            "granularity": 1,
+            "text": "Start Time"
+          },
+          {
+            "granularity": 1,
+            "key": "duration",
+            "itemType": "ms",
+            "text": "Duration"
+          }
+        ]
+      }
+    },
+    "aria-input-field-name": {
+      "id": "aria-input-field-name",
+      "title": "ARIA input fields do not have accessible names",
+      "description": "When an input field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "subItemsHeading": {
+              "itemType": "node",
+              "key": "relatedNode"
+            },
+            "itemType": "node",
+            "key": "node",
+            "text": "Failing Elements"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "path": "0,HTML,1,BODY,1,DIV,2,FORM,8,FIELDSET,7,SPAN",
+              "type": "node",
+              "boundingRect": {
+                "width": 258,
+                "left": 360,
+                "top": 641,
+                "bottom": 674,
+                "right": 618,
+                "height": 33
+              },
+              "explanation": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+              "lhId": "6-20-SPAN",
+              "nodeLabel": "Alabama",
+              "snippet": "<span tabindex=\"0\" id=\"state-button\" role=\"combobox\" aria-expanded=\"false\" aria-autocomplete=\"list\" aria-owns=\"state-menu\" aria-haspopup=\"true\" class=\"ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button u…\">",
+              "selector": "div.container > form#create-employee > fieldset.address > span#state-button"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "width": 258,
+                "height": 33,
+                "bottom": 828,
+                "top": 795,
+                "right": 602,
+                "left": 344
+              },
+              "lhId": "6-21-SPAN",
+              "snippet": "<span tabindex=\"0\" id=\"department-button\" role=\"combobox\" aria-expanded=\"false\" aria-autocomplete=\"list\" aria-owns=\"department-menu\" aria-haspopup=\"true\" class=\"ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button u…\">",
+              "explanation": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+              "path": "0,HTML,1,BODY,1,DIV,2,FORM,11,SPAN",
+              "nodeLabel": "Sales",
+              "selector": "body > div.container > form#create-employee > span#department-button",
+              "type": "node"
+            }
+          }
+        ],
+        "debugData": {
+          "impact": "serious",
+          "type": "debugdata",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "ACT"
+          ]
+        }
+      }
+    },
+    "installable-manifest": {
+      "id": "installable-manifest",
+      "title": "Web app manifest or service worker do not meet the installability requirements",
+      "description": "Service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. With proper service worker and manifest implementations, browsers can proactively prompt users to add your app to their homescreen, which can lead to higher engagement. [Learn more](https://web.dev/installable-manifest/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "displayValue": "1 reason",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "reason",
+            "itemType": "text",
+            "text": "Failure reason"
+          }
+        ],
+        "items": [
+          {
+            "reason": "No manifest was fetched"
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "manifestUrl": null
+        }
+      },
+      "warnings": [],
+      "numericValue": 1,
+      "numericUnit": "element"
+    },
+    "video-caption": {
+      "id": "video-caption",
+      "title": "`<video>` elements contain a `<track>` element with `[kind=\"captions\"]`",
+      "description": "When a video provides a caption it is easier for deaf and hearing impaired users to access its information. [Learn more](https://web.dev/video-caption/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "color-contrast": {
+      "id": "color-contrast",
+      "title": "Background and foreground colors have a sufficient contrast ratio",
+      "description": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "type": "table",
+        "items": []
+      }
+    },
+    "duplicated-javascript": {
+      "id": "duplicated-javascript",
+      "title": "Remove duplicate modules in JavaScript bundles",
+      "description": "Remove large, duplicate JavaScript modules from bundles to reduce unnecessary bytes consumed by network activity. ",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "headings": [],
+        "items": [],
+        "overallSavingsMs": 0,
+        "overallSavingsBytes": 0,
+        "type": "opportunity"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "network-server-latency": {
+      "id": "network-server-latency",
+      "title": "Server Backend Latencies",
+      "description": "Server latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "displayValue": "0 ms",
+      "details": {
+        "type": "table",
+        "items": [],
+        "headings": []
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "aria-valid-attr": {
+      "id": "aria-valid-attr",
+      "title": "`[aria-*]` attributes are valid and not misspelled",
+      "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid names. [Learn more](https://web.dev/aria-valid-attr/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "type": "table",
+        "headings": []
+      }
+    },
+    "modern-image-formats": {
+      "id": "modern-image-formats",
+      "title": "Serve images in next-gen formats",
+      "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more](https://web.dev/uses-webp-images/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "headings": [],
+        "items": [],
+        "overallSavingsMs": 0,
+        "overallSavingsBytes": 0,
+        "type": "opportunity"
+      },
+      "warnings": [],
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "third-party-facades": {
+      "id": "third-party-facades",
+      "title": "Lazy load third-party resources with facades",
+      "description": "Some third-party embeds can be lazy loaded. Consider replacing them with a facade until they are required. [Learn more](https://web.dev/third-party-facades/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "tap-targets": {
+      "id": "tap-targets",
+      "title": "Tap targets are not sized appropriately",
+      "description": "Interactive elements like buttons and links should be large enough (48x48px), and have enough space around them, to be easy enough to tap without overlapping onto other elements. [Learn more](https://web.dev/tap-targets/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "Tap targets are too small because there's no viewport meta tag optimized for mobile screens"
+    },
+    "screenshot-thumbnails": {
+      "id": "screenshot-thumbnails",
+      "title": "Screenshot Thumbnails",
+      "description": "This is what the load of your site looked like.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "scale": 3000,
+        "type": "filmstrip",
+        "items": [
+          {
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timing": 300,
+            "timestamp": 781191336478
+          },
+          {
+            "timestamp": 781191636478,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timing": 600
+          },
+          {
+            "timestamp": 781191936478,
+            "timing": 900,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k="
+          },
+          {
+            "timing": 1200,
+            "timestamp": 781192236478,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k="
+          },
+          {
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timing": 1500,
+            "timestamp": 781192536478
+          },
+          {
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timing": 1800,
+            "timestamp": 781192836478
+          },
+          {
+            "timestamp": 781193136478,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timing": 2100
+          },
+          {
+            "timing": 2400,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timestamp": 781193436478
+          },
+          {
+            "timestamp": 781193736478,
+            "timing": 2700,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k="
+          },
+          {
+            "timestamp": 781194036478,
+            "data": "data:image/jpeg;base64,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mw2MgckjJBGcEHvQB0f9nx/3n/OgA/s+P+8/50APgtUtidhPPUcf0oAnoAKACgAoAKACgAoAKACgAoA5rXPF1joerC3mv9Kt5jEXEN7qAgkYDbkhSpyBleh43D1FAFfRfHtj4hvWtNJ1DQdTuhGZ/Js9XEz+WNoL4VD8uXUZ6cj1oA3fP1X/AJ8rP/wLf/41QAefqv8Az5Wf/gW//wAaoAfBLqDSqJ7a2ji7tHcM7D8DGP50AXaACgAoAKACgAoAKACgAoAKAMfWbfV545BplzBaXG8bJbm3M6bNvI2h0Oc98/nQBLbLqCRATBXfuUAUflkkfmaAJs3f9z9R/jQBFcDUHhYQFIpcfK8i71H1G4Z/OgC3aCRYyJMg54z6UAT0AFABQAUAFABQAUAFABQAUAFACEZGKAMm58MWl1rcWqPLdrcR7cIly6xNgEDdGDtb7x6j09BgA1gMUALQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAH/9k=",
+            "timing": 3000
+          }
+        ]
+      }
+    },
+    "performance-budget": {
+      "id": "performance-budget",
+      "title": "Performance budget",
+      "description": "Keep the quantity and size of network requests under the targets set by the provided performance budget. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/budgets).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "image-size-responsive": {
+      "id": "image-size-responsive",
+      "title": "Serves images with appropriate resolution",
+      "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn more](https://web.dev/serve-responsive-images/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "items": [],
+        "headings": []
+      }
+    },
+    "themed-omnibox": {
+      "id": "themed-omnibox",
+      "title": "Does not set a theme color for the address bar.",
+      "description": "The browser address bar can be themed to match your site. [Learn more](https://web.dev/themed-omnibox/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "explanation": "Failures: No manifest was fetched,\nNo `<meta name=\"theme-color\">` tag found.",
+      "details": {
+        "items": [
+          {
+            "isParseFailure": true,
+            "themeColor": null,
+            "parseFailureReason": "No manifest was fetched",
+            "failures": [
+              "No manifest was fetched",
+              "No `<meta name=\"theme-color\">` tag found"
+            ]
+          }
+        ],
+        "type": "debugdata"
+      }
+    },
+    "deprecations": {
+      "id": "deprecations",
+      "title": "Avoids deprecated APIs",
+      "description": "Deprecated APIs will eventually be removed from the browser. [Learn more](https://web.dev/deprecations/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "items": [],
+        "headings": []
+      }
+    },
+    "uses-rel-preconnect": {
+      "id": "uses-rel-preconnect",
+      "title": "Preconnect to required origins",
+      "description": "Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn more](https://web.dev/uses-rel-preconnect/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "overallSavingsMs": 0,
+        "headings": [],
+        "type": "opportunity",
+        "items": []
+      },
+      "warnings": [],
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "input-image-alt": {
+      "id": "input-image-alt",
+      "title": "`<input type=\"image\">` elements have `[alt]` text",
+      "description": "When an image is being used as an `<input>` button, providing alternative text can help screen reader users understand the purpose of the button. [Learn more](https://web.dev/input-image-alt/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "max-potential-fid": {
+      "id": "max-potential-fid",
+      "title": "Max Potential First Input Delay",
+      "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more](https://web.dev/lighthouse-max-potential-fid/).",
+      "score": 0.96,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "100 ms",
+      "numericValue": 100,
+      "numericUnit": "millisecond"
+    },
+    "heading-order": {
+      "id": "heading-order",
+      "title": "Heading elements appear in a sequentially-descending order",
+      "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://web.dev/heading-order/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [],
+        "type": "table",
+        "headings": []
+      }
+    },
+    "render-blocking-resources": {
+      "id": "render-blocking-resources",
+      "title": "Eliminate render-blocking resources",
+      "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn more](https://web.dev/render-blocking-resources/).",
+      "score": 0.36,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "Potential savings of 1,910 ms",
+      "details": {
+        "headings": [
+          {
+            "label": "URL",
+            "valueType": "url",
+            "key": "url"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "valueType": "timespanMs",
+            "label": "Potential Savings",
+            "key": "wastedMs"
+          }
+        ],
+        "overallSavingsMs": 1912,
+        "items": [
+          {
+            "wastedMs": 780,
+            "totalBytes": 2548,
+            "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+          },
+          {
+            "url": "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",
+            "totalBytes": 9100,
+            "wastedMs": 930
+          },
+          {
+            "totalBytes": 31983,
+            "wastedMs": 1230,
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+          },
+          {
+            "totalBytes": 21083,
+            "wastedMs": 600,
+            "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.full.min.js"
+          },
+          {
+            "wastedMs": 150,
+            "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js",
+            "totalBytes": 2413
+          },
+          {
+            "url": "https://code.jquery.com/ui/1.12.1/jquery-ui.js",
+            "wastedMs": 900,
+            "totalBytes": 125247
+          }
+        ],
+        "type": "opportunity"
+      },
+      "numericValue": 1912,
+      "numericUnit": "millisecond"
+    },
+    "metrics": {
+      "id": "metrics",
+      "title": "Metrics",
+      "description": "Collects all available metrics.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "items": [
+          {
+            "observedNavigationStart": 0,
+            "observedTimeOriginTs": 781191036478,
+            "largestContentfulPaint": 2785,
+            "observedFirstContentfulPaint": 145,
+            "firstMeaningfulPaint": 2785,
+            "observedLastVisualChangeTs": 781191267478,
+            "observedFirstMeaningfulPaint": 145,
+            "observedFirstVisualChange": 147,
+            "observedFirstContentfulPaintAllFrames": 145,
+            "observedCumulativeLayoutShift": 0.0032817373552257133,
+            "observedTraceEndTs": 781193542706,
+            "observedLargestContentfulPaintAllFramesTs": 781191181440,
+            "observedLoadTs": 781191176481,
+            "totalBlockingTime": 25,
+            "maxPotentialFID": 100,
+            "observedDomContentLoadedTs": 781191176434,
+            "observedTraceEnd": 2506,
+            "observedFirstPaintTs": 781191181440,
+            "observedLastVisualChange": 231,
+            "totalCumulativeLayoutShift": 0.0032817373552257133,
+            "observedFirstVisualChangeTs": 781191183478,
+            "observedDomContentLoaded": 140,
+            "observedSpeedIndex": 171,
+            "observedFirstMeaningfulPaintTs": 781191181440,
+            "observedFirstPaint": 145,
+            "observedLargestContentfulPaintTs": 781191181440,
+            "observedCumulativeLayoutShiftMainFrame": 0.0032817373552257133,
+            "observedFirstContentfulPaintAllFramesTs": 781191181440,
+            "speedIndex": 2710,
+            "observedLargestContentfulPaint": 145,
+            "observedNavigationStartTs": 781191036478,
+            "observedTimeOrigin": 0,
+            "observedLoad": 140,
+            "observedFirstContentfulPaintTs": 781191181440,
+            "observedTotalCumulativeLayoutShift": 0.0032817373552257133,
+            "cumulativeLayoutShiftMainFrame": 0.0032817373552257133,
+            "interactive": 2785,
+            "firstContentfulPaint": 2710,
+            "observedSpeedIndexTs": 781191207935,
+            "cumulativeLayoutShift": 0.0032817373552257133,
+            "observedLargestContentfulPaintAllFrames": 145
+          },
+          {
+            "lcpInvalidated": false
+          }
+        ],
+        "type": "debugdata"
+      },
+      "numericValue": 2785,
+      "numericUnit": "millisecond"
+    },
+    "aria-meter-name": {
+      "id": "aria-meter-name",
+      "title": "ARIA `meter` elements have accessible names",
+      "description": "When an element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more](https://web.dev/aria-name/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "interactive": {
+      "id": "interactive",
+      "title": "Time to Interactive",
+      "description": "Time to interactive is the amount of time it takes for the page to become fully interactive. [Learn more](https://web.dev/interactive/).",
+      "score": 0.97,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "2.8 s",
+      "numericValue": 2785,
+      "numericUnit": "millisecond"
+    },
+    "image-aspect-ratio": {
+      "id": "image-aspect-ratio",
+      "title": "Displays images with correct aspect ratio",
+      "description": "Image display dimensions should match natural aspect ratio. [Learn more](https://web.dev/image-aspect-ratio/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "uses-rel-preload": {
+      "id": "uses-rel-preload",
+      "title": "Preload key requests",
+      "description": "Consider using `<link rel=preload>` to prioritize fetching resources that are currently requested later in page load. [Learn more](https://web.dev/uses-rel-preload/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable",
+      "details": {
+        "headings": [],
+        "type": "opportunity",
+        "overallSavingsMs": 0,
+        "items": []
+      }
+    },
+    "diagnostics": {
+      "id": "diagnostics",
+      "title": "Diagnostics",
+      "description": "Collection of useful page vitals.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "items": [
+          {
+            "numTasksOver100ms": 0,
+            "totalByteWeight": 209339,
+            "mainDocumentTransferSize": 1216,
+            "maxRtt": 0.0007674991519341716,
+            "numRequests": 11,
+            "maxServerLatency": null,
+            "numTasksOver10ms": 4,
+            "numTasksOver50ms": 1,
+            "rtt": 0.0007674991519341716,
+            "throughput": 19249545432.626373,
+            "numTasks": 144,
+            "totalTaskTime": 158.43200000000004,
+            "numTasksOver500ms": 0,
+            "numStylesheets": 4,
+            "numFonts": 0,
+            "numTasksOver25ms": 2,
+            "numScripts": 5
+          }
+        ],
+        "type": "debugdata"
+      }
+    },
+    "structured-data": {
+      "id": "structured-data",
+      "title": "Structured data is valid",
+      "description": "Run the [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/) and the [Structured Data Linter](http://linter.structured-data.org/) to validate structured data. [Learn more](https://web.dev/structured-data/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "html-has-lang": {
+      "id": "html-has-lang",
+      "title": "`<html>` element does not have a `[lang]` attribute",
+      "description": "If a page doesn't specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more](https://web.dev/html-has-lang/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "items": [
+          {
+            "node": {
+              "lhId": "6-22-HTML",
+              "snippet": "<html>",
+              "selector": "html",
+              "nodeLabel": "html",
+              "boundingRect": {
+                "bottom": 1742,
+                "right": 980,
+                "width": 980,
+                "top": 0,
+                "height": 1742,
+                "left": 0
+              },
+              "type": "node",
+              "explanation": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+              "path": "0,HTML"
+            }
+          }
+        ],
+        "debugData": {
+          "type": "debugdata",
+          "tags": [
+            "cat.language",
+            "wcag2a",
+            "wcag311",
+            "ACT"
+          ],
+          "impact": "serious"
+        },
+        "headings": [
+          {
+            "subItemsHeading": {
+              "itemType": "node",
+              "key": "relatedNode"
+            },
+            "key": "node",
+            "text": "Failing Elements",
+            "itemType": "node"
+          }
+        ]
+      }
+    },
+    "meta-viewport": {
+      "id": "meta-viewport",
+      "title": "`[user-scalable=\"no\"]` is not used in the `<meta name=\"viewport\">` element and the `[maximum-scale]` attribute is not less than 5.",
+      "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more](https://web.dev/meta-viewport/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "pwa-each-page-has-url": {
+      "id": "pwa-each-page-has-url",
+      "title": "Each page has a URL",
+      "description": "Ensure individual pages are deep linkable via URL and that URLs are unique for the purpose of shareability on social media. [Learn more](https://web.dev/pwa-each-page-has-url/).",
+      "score": null,
+      "scoreDisplayMode": "manual"
+    },
+    "form-field-multiple-labels": {
+      "id": "form-field-multiple-labels",
+      "title": "No form fields have multiple labels",
+      "description": "Form fields with multiple labels can be confusingly announced by assistive technologies like screen readers which use either the first, the last, or all of the labels. [Learn more](https://web.dev/form-field-multiple-labels/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "object-alt": {
+      "id": "object-alt",
+      "title": "`<object>` elements have alternate text",
+      "description": "Screen readers cannot translate non-text content. Adding alternate text to `<object>` elements helps screen readers convey meaning to users. [Learn more](https://web.dev/object-alt/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "unminified-css": {
+      "id": "unminified-css",
+      "title": "Minify CSS",
+      "description": "Minifying CSS files can reduce network payload sizes. [Learn more](https://web.dev/unminified-css/).",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "details": {
+        "overallSavingsMs": 0,
+        "items": [],
+        "type": "opportunity",
+        "headings": [],
+        "overallSavingsBytes": 0
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "first-contentful-paint": {
+      "id": "first-contentful-paint",
+      "title": "First Contentful Paint",
+      "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more](https://web.dev/first-contentful-paint/).",
+      "score": 0.6,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "2.7 s",
+      "numericValue": 2710,
+      "numericUnit": "millisecond"
+    },
+    "uses-passive-event-listeners": {
+      "id": "uses-passive-event-listeners",
+      "title": "Does not use passive listeners to improve scrolling performance",
+      "description": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more](https://web.dev/uses-passive-event-listeners/).",
+      "score": 0,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "items": [
+          {
+            "source": {
+              "type": "source-location",
+              "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+              "column": 41540,
+              "line": 1,
+              "urlProvider": "network"
+            }
+          },
+          {
+            "source": {
+              "url": "https://p14-front-end-hr-net.vercel.app/jquery.datetimepicker.full.min.js",
+              "column": 55352,
+              "type": "source-location",
+              "line": 0,
+              "urlProvider": "network"
+            }
+          }
+        ],
+        "type": "table",
+        "headings": [
+          {
+            "itemType": "source-location",
+            "text": "Source",
+            "key": "source"
+          }
+        ]
+      }
+    },
+    "button-name": {
+      "id": "button-name",
+      "title": "Buttons have an accessible name",
+      "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn more](https://web.dev/button-name/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [],
+        "items": []
+      }
+    },
+    "lcp-lazy-loaded": {
+      "id": "lcp-lazy-loaded",
+      "title": "Largest Contentful Paint image was not lazily loaded",
+      "description": "Above-the-fold images that are lazily loaded render later in the page lifecycle, which can delay the largest contentful paint. [Learn more](https://web.dev/lcp-lazy-loading/).",
+      "score": null,
+      "scoreDisplayMode": "notApplicable"
+    },
+    "final-screenshot": {
+      "id": "final-screenshot",
+      "title": "Final Screenshot",
+      "description": "The last screenshot captured of the pageload.",
+      "score": null,
+      "scoreDisplayMode": "informative",
+      "details": {
+        "timestamp": 781191267766,
+        "timing": 231,
+        "type": "screenshot",
+        "data": "data:image/jpeg;base64,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"
+      }
+    },
+    "password-inputs-can-be-pasted-into": {
+      "id": "password-inputs-can-be-pasted-into",
+      "title": "Allows users to paste into password fields",
+      "description": "Preventing password pasting undermines good security policy. [Learn more](https://web.dev/password-inputs-can-be-pasted-into/).",
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "headings": [],
+        "items": [],
+        "type": "table"
+      }
+    },
+    "dom-size": {
+      "id": "dom-size",
+      "title": "Avoids an excessive DOM size",
+      "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn more](https://web.dev/dom-size/).",
+      "score": 0.98,
+      "scoreDisplayMode": "numeric",
+      "displayValue": "606 elements",
+      "details": {
+        "headings": [
+          {
+            "key": "statistic",
+            "text": "Statistic",
+            "itemType": "text"
+          },
+          {
+            "key": "node",
+            "itemType": "node",
+            "text": "Element"
+          },
+          {
+            "key": "value",
+            "itemType": "numeric",
+            "text": "Value"
+          }
+        ],
+        "type": "table",
+        "items": [
+          {
+            "statistic": "Total DOM Elements",
+            "value": 606
+          },
+          {
+            "statistic": "Maximum DOM Depth",
+            "value": 9,
+            "node": {
+              "snippet": "<div>",
+              "path": "0,HTML,1,BODY,5,DIV,0,DIV,1,DIV,0,TABLE,1,TBODY,0,TR,0,TD,0,DIV",
+              "lhId": "6-10-DIV",
+              "type": "node",
+              "selector": "tbody > tr > td.xdsoft_date > div",
+              "boundingRect": {
+                "top": 0,
+                "right": 0,
+                "height": 0,
+                "bottom": 0,
+                "width": 0,
+                "left": 0
+              },
+              "nodeLabel": "1"
+            }
+          },
+          {
+            "node": {
+              "snippet": "<div style=\"margin-top: 0px;\">",
+              "path": "0,HTML,1,BODY,5,DIV,0,DIV,0,DIV,3,DIV,1,DIV,0,DIV",
+              "lhId": "6-11-DIV",
+              "nodeLabel": "1950195119521953195419551956195719581959196019611962196319641965196619671968196…",
+              "selector": "div.xdsoft_monthpicker > div.xdsoft_label > div.xdsoft_select > div",
+              "type": "node",
+              "boundingRect": {
+                "width": 0,
+                "right": 0,
+                "left": 0,
+                "top": 0,
+                "bottom": 0,
+                "height": 0
+              }
+            },
+            "value": 101,
+            "statistic": "Maximum Child Elements"
+          }
+        ]
+      },
+      "numericValue": 606,
+      "numericUnit": "element"
+    }
+  },
+  "categories": {
+    "performance": {
+      "id": "performance",
+      "title": "Performance",
+      "score": 0.91,
+      "auditRefs": [
+        {
+          "id": "first-contentful-paint",
+          "weight": 10,
+          "group": "metrics",
+          "acronym": "FCP",
+          "relevantAudits": [
+            "server-response-time",
+            "render-blocking-resources",
+            "redirects",
+            "critical-request-chains",
+            "uses-text-compression",
+            "uses-rel-preconnect",
+            "uses-rel-preload",
+            "font-display",
+            "unminified-javascript",
+            "unminified-css",
+            "unused-css-rules"
+          ]
+        },
+        {
+          "id": "interactive",
+          "weight": 10,
+          "group": "metrics",
+          "acronym": "TTI"
+        },
+        {
+          "id": "speed-index",
+          "weight": 10,
+          "group": "metrics",
+          "acronym": "SI"
+        },
+        {
+          "id": "total-blocking-time",
+          "weight": 30,
+          "group": "metrics",
+          "acronym": "TBT",
+          "relevantAudits": [
+            "long-tasks",
+            "third-party-summary",
+            "third-party-facades",
+            "bootup-time",
+            "mainthread-work-breakdown",
+            "dom-size",
+            "duplicated-javascript",
+            "legacy-javascript",
+            "viewport"
+          ]
+        },
+        {
+          "id": "largest-contentful-paint",
+          "weight": 25,
+          "group": "metrics",
+          "acronym": "LCP",
+          "relevantAudits": [
+            "server-response-time",
+            "render-blocking-resources",
+            "redirects",
+            "critical-request-chains",
+            "uses-text-compression",
+            "uses-rel-preconnect",
+            "uses-rel-preload",
+            "font-display",
+            "unminified-javascript",
+            "unminified-css",
+            "unused-css-rules",
+            "largest-contentful-paint-element",
+            "preload-lcp-image",
+            "unused-javascript",
+            "efficient-animated-content",
+            "total-byte-weight"
+          ]
+        },
+        {
+          "id": "cumulative-layout-shift",
+          "weight": 15,
+          "group": "metrics",
+          "acronym": "CLS",
+          "relevantAudits": [
+            "layout-shift-elements",
+            "non-composited-animations",
+            "unsized-images"
+          ]
+        },
+        {
+          "id": "max-potential-fid",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "first-meaningful-paint",
+          "weight": 0,
+          "group": "hidden",
+          "acronym": "FMP"
+        },
+        {
+          "id": "render-blocking-resources",
+          "weight": 0
+        },
+        {
+          "id": "uses-responsive-images",
+          "weight": 0
+        },
+        {
+          "id": "offscreen-images",
+          "weight": 0
+        },
+        {
+          "id": "unminified-css",
+          "weight": 0
+        },
+        {
+          "id": "unminified-javascript",
+          "weight": 0
+        },
+        {
+          "id": "unused-css-rules",
+          "weight": 0
+        },
+        {
+          "id": "unused-javascript",
+          "weight": 0
+        },
+        {
+          "id": "uses-optimized-images",
+          "weight": 0
+        },
+        {
+          "id": "modern-image-formats",
+          "weight": 0
+        },
+        {
+          "id": "uses-text-compression",
+          "weight": 0
+        },
+        {
+          "id": "uses-rel-preconnect",
+          "weight": 0
+        },
+        {
+          "id": "server-response-time",
+          "weight": 0
+        },
+        {
+          "id": "redirects",
+          "weight": 0
+        },
+        {
+          "id": "uses-rel-preload",
+          "weight": 0
+        },
+        {
+          "id": "efficient-animated-content",
+          "weight": 0
+        },
+        {
+          "id": "duplicated-javascript",
+          "weight": 0
+        },
+        {
+          "id": "legacy-javascript",
+          "weight": 0
+        },
+        {
+          "id": "preload-lcp-image",
+          "weight": 0
+        },
+        {
+          "id": "total-byte-weight",
+          "weight": 0
+        },
+        {
+          "id": "uses-long-cache-ttl",
+          "weight": 0
+        },
+        {
+          "id": "dom-size",
+          "weight": 0
+        },
+        {
+          "id": "critical-request-chains",
+          "weight": 0
+        },
+        {
+          "id": "user-timings",
+          "weight": 0
+        },
+        {
+          "id": "bootup-time",
+          "weight": 0
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "weight": 0
+        },
+        {
+          "id": "font-display",
+          "weight": 0
+        },
+        {
+          "id": "resource-summary",
+          "weight": 0
+        },
+        {
+          "id": "third-party-summary",
+          "weight": 0
+        },
+        {
+          "id": "third-party-facades",
+          "weight": 0
+        },
+        {
+          "id": "largest-contentful-paint-element",
+          "weight": 0
+        },
+        {
+          "id": "lcp-lazy-loaded",
+          "weight": 0
+        },
+        {
+          "id": "layout-shift-elements",
+          "weight": 0
+        },
+        {
+          "id": "uses-passive-event-listeners",
+          "weight": 0
+        },
+        {
+          "id": "no-document-write",
+          "weight": 0
+        },
+        {
+          "id": "long-tasks",
+          "weight": 0
+        },
+        {
+          "id": "non-composited-animations",
+          "weight": 0
+        },
+        {
+          "id": "unsized-images",
+          "weight": 0
+        },
+        {
+          "id": "viewport",
+          "weight": 0
+        },
+        {
+          "id": "no-unload-listeners",
+          "weight": 0
+        },
+        {
+          "id": "performance-budget",
+          "weight": 0,
+          "group": "budgets"
+        },
+        {
+          "id": "timing-budget",
+          "weight": 0,
+          "group": "budgets"
+        },
+        {
+          "id": "network-requests",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "network-rtt",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "network-server-latency",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "main-thread-tasks",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "diagnostics",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "metrics",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "screenshot-thumbnails",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "final-screenshot",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "script-treemap-data",
+          "weight": 0,
+          "group": "hidden"
+        },
+        {
+          "id": "first-contentful-paint-3g",
+          "weight": 0
+        }
+      ]
+    },
+    "accessibility": {
+      "id": "accessibility",
+      "title": "Accessibility",
+      "description": "These checks highlight opportunities to [improve the accessibility of your web app](https://web.dev/lighthouse-accessibility/). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.",
+      "score": 0.95,
+      "manualDescription": "These items address areas which an automated testing tool cannot cover. Learn more in our guide on [conducting an accessibility review](https://developers.google.com/web/fundamentals/accessibility/how-to-review).",
+      "auditRefs": [
+        {
+          "id": "accesskeys",
+          "weight": 0,
+          "group": "a11y-navigation"
+        },
+        {
+          "id": "aria-allowed-attr",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-command-name",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-hidden-body",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-hidden-focus",
+          "weight": 3,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-input-field-name",
+          "weight": 3,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-meter-name",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-progressbar-name",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-required-attr",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-required-children",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-required-parent",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-roles",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-toggle-field-name",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-tooltip-name",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-treeitem-name",
+          "weight": 0,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "aria-valid-attr",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "button-name",
+          "weight": 10,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "bypass",
+          "weight": 3,
+          "group": "a11y-navigation"
+        },
+        {
+          "id": "color-contrast",
+          "weight": 3,
+          "group": "a11y-color-contrast"
+        },
+        {
+          "id": "definition-list",
+          "weight": 0,
+          "group": "a11y-tables-lists"
+        },
+        {
+          "id": "dlitem",
+          "weight": 0,
+          "group": "a11y-tables-lists"
+        },
+        {
+          "id": "document-title",
+          "weight": 3,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "duplicate-id-active",
+          "weight": 0,
+          "group": "a11y-navigation"
+        },
+        {
+          "id": "duplicate-id-aria",
+          "weight": 10,
+          "group": "a11y-aria"
+        },
+        {
+          "id": "form-field-multiple-labels",
+          "weight": 0,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "frame-title",
+          "weight": 0,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "heading-order",
+          "weight": 2,
+          "group": "a11y-navigation"
+        },
+        {
+          "id": "html-has-lang",
+          "weight": 3,
+          "group": "a11y-language"
+        },
+        {
+          "id": "html-lang-valid",
+          "weight": 0,
+          "group": "a11y-language"
+        },
+        {
+          "id": "image-alt",
+          "weight": 0,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "input-image-alt",
+          "weight": 0,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "label",
+          "weight": 10,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "link-name",
+          "weight": 3,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "list",
+          "weight": 0,
+          "group": "a11y-tables-lists"
+        },
+        {
+          "id": "listitem",
+          "weight": 0,
+          "group": "a11y-tables-lists"
+        },
+        {
+          "id": "meta-refresh",
+          "weight": 0,
+          "group": "a11y-best-practices"
+        },
+        {
+          "id": "meta-viewport",
+          "weight": 0,
+          "group": "a11y-best-practices"
+        },
+        {
+          "id": "object-alt",
+          "weight": 0,
+          "group": "a11y-names-labels"
+        },
+        {
+          "id": "tabindex",
+          "weight": 3,
+          "group": "a11y-navigation"
+        },
+        {
+          "id": "td-headers-attr",
+          "weight": 0,
+          "group": "a11y-tables-lists"
+        },
+        {
+          "id": "th-has-data-cells",
+          "weight": 0,
+          "group": "a11y-tables-lists"
+        },
+        {
+          "id": "valid-lang",
+          "weight": 0,
+          "group": "a11y-language"
+        },
+        {
+          "id": "video-caption",
+          "weight": 0,
+          "group": "a11y-audio-video"
+        },
+        {
+          "id": "logical-tab-order",
+          "weight": 0
+        },
+        {
+          "id": "focusable-controls",
+          "weight": 0
+        },
+        {
+          "id": "interactive-element-affordance",
+          "weight": 0
+        },
+        {
+          "id": "managed-focus",
+          "weight": 0
+        },
+        {
+          "id": "focus-traps",
+          "weight": 0
+        },
+        {
+          "id": "custom-controls-labels",
+          "weight": 0
+        },
+        {
+          "id": "custom-controls-roles",
+          "weight": 0
+        },
+        {
+          "id": "visual-order-follows-dom",
+          "weight": 0
+        },
+        {
+          "id": "offscreen-content-hidden",
+          "weight": 0
+        },
+        {
+          "id": "use-landmarks",
+          "weight": 0
+        }
+      ]
+    },
+    "best-practices": {
+      "id": "best-practices",
+      "title": "Best Practices",
+      "score": 0.83,
+      "auditRefs": [
+        {
+          "id": "is-on-https",
+          "weight": 1,
+          "group": "best-practices-trust-safety"
+        },
+        {
+          "id": "geolocation-on-start",
+          "weight": 1,
+          "group": "best-practices-trust-safety"
+        },
+        {
+          "id": "notification-on-start",
+          "weight": 1,
+          "group": "best-practices-trust-safety"
+        },
+        {
+          "id": "no-vulnerable-libraries",
+          "weight": 1,
+          "group": "best-practices-trust-safety"
+        },
+        {
+          "id": "csp-xss",
+          "weight": 0,
+          "group": "best-practices-trust-safety"
+        },
+        {
+          "id": "password-inputs-can-be-pasted-into",
+          "weight": 1,
+          "group": "best-practices-ux"
+        },
+        {
+          "id": "image-aspect-ratio",
+          "weight": 1,
+          "group": "best-practices-ux"
+        },
+        {
+          "id": "image-size-responsive",
+          "weight": 1,
+          "group": "best-practices-ux"
+        },
+        {
+          "id": "preload-fonts",
+          "weight": 0,
+          "group": "best-practices-ux"
+        },
+        {
+          "id": "doctype",
+          "weight": 1,
+          "group": "best-practices-browser-compat"
+        },
+        {
+          "id": "charset",
+          "weight": 1,
+          "group": "best-practices-browser-compat"
+        },
+        {
+          "id": "js-libraries",
+          "weight": 0,
+          "group": "best-practices-general"
+        },
+        {
+          "id": "deprecations",
+          "weight": 1,
+          "group": "best-practices-general"
+        },
+        {
+          "id": "errors-in-console",
+          "weight": 1,
+          "group": "best-practices-general"
+        },
+        {
+          "id": "valid-source-maps",
+          "weight": 0,
+          "group": "best-practices-general"
+        },
+        {
+          "id": "inspector-issues",
+          "weight": 1,
+          "group": "best-practices-general"
+        }
+      ]
+    },
+    "seo": {
+      "id": "seo",
+      "title": "SEO",
+      "description": "These checks ensure that your page is following basic search engine optimization advice. There are many additional factors Lighthouse does not score here that may affect your search ranking, including performance on [Core Web Vitals](https://web.dev/learn-web-vitals/). [Learn more](https://support.google.com/webmasters/answer/35769).",
+      "score": 0.64,
+      "manualDescription": "Run these additional validators on your site to check additional SEO best practices.",
+      "auditRefs": [
+        {
+          "id": "viewport",
+          "weight": 1,
+          "group": "seo-mobile"
+        },
+        {
+          "id": "document-title",
+          "weight": 1,
+          "group": "seo-content"
+        },
+        {
+          "id": "meta-description",
+          "weight": 1,
+          "group": "seo-content"
+        },
+        {
+          "id": "http-status-code",
+          "weight": 1,
+          "group": "seo-crawl"
+        },
+        {
+          "id": "link-text",
+          "weight": 1,
+          "group": "seo-content"
+        },
+        {
+          "id": "crawlable-anchors",
+          "weight": 1,
+          "group": "seo-crawl"
+        },
+        {
+          "id": "is-crawlable",
+          "weight": 1,
+          "group": "seo-crawl"
+        },
+        {
+          "id": "robots-txt",
+          "weight": 0,
+          "group": "seo-crawl"
+        },
+        {
+          "id": "image-alt",
+          "weight": 0,
+          "group": "seo-content"
+        },
+        {
+          "id": "hreflang",
+          "weight": 1,
+          "group": "seo-content"
+        },
+        {
+          "id": "canonical",
+          "weight": 0,
+          "group": "seo-content"
+        },
+        {
+          "id": "font-size",
+          "weight": 1,
+          "group": "seo-mobile"
+        },
+        {
+          "id": "plugins",
+          "weight": 1,
+          "group": "seo-content"
+        },
+        {
+          "id": "tap-targets",
+          "weight": 1,
+          "group": "seo-mobile"
+        },
+        {
+          "id": "structured-data",
+          "weight": 0
+        }
+      ]
+    },
+    "pwa": {
+      "id": "pwa",
+      "title": "PWA",
+      "description": "These checks validate the aspects of a Progressive Web App. [Learn more](https://developers.google.com/web/progressive-web-apps/checklist).",
+      "score": 0,
+      "manualDescription": "These checks are required by the baseline [PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist) but are not automatically checked by Lighthouse. They do not affect your score but it's important that you verify them manually.",
+      "auditRefs": [
+        {
+          "id": "installable-manifest",
+          "weight": 2,
+          "group": "pwa-installable"
+        },
+        {
+          "id": "service-worker",
+          "weight": 1,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "splash-screen",
+          "weight": 1,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "themed-omnibox",
+          "weight": 1,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "content-width",
+          "weight": 1,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "viewport",
+          "weight": 2,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "apple-touch-icon",
+          "weight": 1,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "maskable-icon",
+          "weight": 1,
+          "group": "pwa-optimized"
+        },
+        {
+          "id": "pwa-cross-browser",
+          "weight": 0
+        },
+        {
+          "id": "pwa-page-transitions",
+          "weight": 0
+        },
+        {
+          "id": "pwa-each-page-has-url",
+          "weight": 0
+        }
+      ]
+    }
+  },
+  "categoryGroups": {
+    "a11y-language": {
+      "title": "Internationalization and localization",
+      "description": "These are opportunities to improve the interpretation of your content by users in different locales."
+    },
+    "a11y-aria": {
+      "title": "ARIA",
+      "description": "These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader."
+    },
+    "budgets": {
+      "title": "Budgets",
+      "description": "Performance budgets set standards for the performance of your site."
+    },
+    "best-practices-trust-safety": {
+      "title": "Trust and Safety"
+    },
+    "a11y-audio-video": {
+      "title": "Audio and video",
+      "description": "These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or vision impairments."
+    },
+    "seo-content": {
+      "title": "Content Best Practices",
+      "description": "Format your HTML in a way that enables crawlers to better understand your app’s content."
+    },
+    "seo-mobile": {
+      "title": "Mobile Friendly",
+      "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/)."
+    },
+    "best-practices-ux": {
+      "title": "User Experience"
+    },
+    "a11y-tables-lists": {
+      "title": "Tables and lists",
+      "description": "These are opportunities to improve the experience of reading tabular or list data using assistive technology, like a screen reader."
+    },
+    "pwa-installable": {
+      "title": "Installable"
+    },
+    "a11y-names-labels": {
+      "title": "Names and labels",
+      "description": "These are opportunities to improve the semantics of the controls in your application. This may enhance the experience for users of assistive technology, like a screen reader."
+    },
+    "a11y-best-practices": {
+      "title": "Best practices",
+      "description": "These items highlight common accessibility best practices."
+    },
+    "seo-crawl": {
+      "title": "Crawling and Indexing",
+      "description": "To appear in search results, crawlers need access to your app."
+    },
+    "diagnostics": {
+      "title": "Diagnostics",
+      "description": "More information about the performance of your application. These numbers don't [directly affect](https://web.dev/performance-scoring/) the Performance score."
+    },
+    "a11y-color-contrast": {
+      "title": "Contrast",
+      "description": "These are opportunities to improve the legibility of your content."
+    },
+    "best-practices-general": {
+      "title": "General"
+    },
+    "best-practices-browser-compat": {
+      "title": "Browser Compatibility"
+    },
+    "pwa-optimized": {
+      "title": "PWA Optimized"
+    },
+    "load-opportunities": {
+      "title": "Opportunities",
+      "description": "These suggestions can help your page load faster. They don't [directly affect](https://web.dev/performance-scoring/) the Performance score."
+    },
+    "a11y-navigation": {
+      "title": "Navigation",
+      "description": "These are opportunities to improve keyboard navigation in your application."
+    },
+    "metrics": {
+      "title": "Metrics"
+    }
+  },
+  "timing": {
+    "total": 11721.800000000001
+  },
+  "i18n": {
+    "rendererFormattedStrings": {
+      "varianceDisclaimer": "Values are estimated and may vary. The [performance score is calculated](https://web.dev/performance-scoring/) directly from these metrics.",
+      "opportunityResourceColumnLabel": "Opportunity",
+      "opportunitySavingsColumnLabel": "Estimated Savings",
+      "errorMissingAuditInfo": "Report error: no audit information",
+      "errorLabel": "Error!",
+      "warningHeader": "Warnings: ",
+      "passedAuditsGroupTitle": "Passed audits",
+      "notApplicableAuditsGroupTitle": "Not applicable",
+      "manualAuditsGroupTitle": "Additional items to manually check",
+      "toplevelWarningsMessage": "There were issues affecting this run of Lighthouse:",
+      "crcLongestDurationLabel": "Maximum critical path latency:",
+      "crcInitialNavigation": "Initial Navigation",
+      "lsPerformanceCategoryDescription": "[Lighthouse](https://developers.google.com/web/tools/lighthouse/) analysis of the current page on an emulated mobile network. Values are estimated and may vary.",
+      "labDataTitle": "Lab Data",
+      "warningAuditsGroupTitle": "Passed audits but with warnings",
+      "snippetExpandButtonLabel": "Expand snippet",
+      "snippetCollapseButtonLabel": "Collapse snippet",
+      "thirdPartyResourcesLabel": "Show 3rd-party resources",
+      "runtimeDesktopEmulation": "Emulated Desktop",
+      "runtimeMobileEmulation": "Emulated Moto G4",
+      "runtimeNoEmulation": "No emulation",
+      "runtimeSettingsBenchmark": "CPU/Memory Power",
+      "runtimeSettingsCPUThrottling": "CPU throttling",
+      "runtimeSettingsDevice": "Device",
+      "runtimeSettingsNetworkThrottling": "Network throttling",
+      "runtimeSettingsUANetwork": "User agent (network)",
+      "runtimeUnknown": "Unknown",
+      "dropdownCopyJSON": "Copy JSON",
+      "dropdownDarkTheme": "Toggle Dark Theme",
+      "dropdownPrintExpanded": "Print Expanded",
+      "dropdownPrintSummary": "Print Summary",
+      "dropdownSaveGist": "Save as Gist",
+      "dropdownSaveHTML": "Save as HTML",
+      "dropdownSaveJSON": "Save as JSON",
+      "dropdownViewer": "Open in Viewer",
+      "footerIssue": "File an issue",
+      "throttlingProvided": "Provided by environment",
+      "calculatorLink": "See calculator.",
+      "runtimeSettingsAxeVersion": "Axe version",
+      "viewTreemapLabel": "View Treemap",
+      "showRelevantAudits": "Show audits relevant to:"
+    }
+  }
+}
