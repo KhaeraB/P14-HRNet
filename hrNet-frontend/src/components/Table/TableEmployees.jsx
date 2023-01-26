@@ -4,8 +4,7 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { columns } from '../../config/ColumnsTableData'
 import { selectAllEmployees, useGetEmployeesQuery } from '../../features/employees/employeesApiSlice';
-
-
+import { Link } from "react-router-dom";
 /**
  * Description Table Employees with Antd
  * @param {any} {ids}
@@ -62,6 +61,9 @@ const TableEmployees = ({ ids }) => {
                     >
                     </Table>
                 </ConfigProvider> 
+                <div className='return'>
+               <button className='btn-home'> <Link className='link' to={"/"}>Home</Link></button>
+               </div>
         </>
         
     );

@@ -1,89 +1,22 @@
 body{
   margin: 0;
 }
-
-.errmsg {
-  display: inline-block;
-  background-color: var(--TABLE-BGCOLOR);
-  color: var(--ERROR);
-  padding: 0.25em;
-  margin-bottom: 0.5em;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.icon-button {
-  width: 48px;
-  height: 48px;
-  font-size: 2.5rem;
-  background-color: transparent;
-  border: none;
-  color: var(--COLOR);
-  display: grid;
-  place-content: center;
-}
-
-.icon-button:hover,
-.icon-button:focus-visible {
-  transform: scale(1.2);
-}
-
-.icon-button[disabled] {
-  visibility: hidden;
-}
-.form{
+.return{
+  margin: 0.2% 0 4% 0;
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  justify-content: center;
 }
-.form__input,
-.form__submit-button {
-  padding: 0.5em;
-  border-radius: 15px;
+.btn-home{
+  padding: 10px;
+border: none;
+border-radius: 10px;
+background-color: #6e8708;
+color: white;
+width: 30%;
 }
-
-.form__input--text {
-  min-height: 150px;
-}
-
-.form__input--incomplete {
-  border: 1px solid var(--INPUT-INVALID);
-  outline: 1px solid var(--INPUT-INVALID);
-}
-.form__input--complete {
-  border: 1px solid var(--STATUS-COMPLETE);
-  outline: 1px solid var(--STATUS-COMPLETE);
-}
-
-
-.form__checkbox {
-  width: 24px;
-  height: 24px;
-}
-
-.form__select {
-  padding: 0.25em;
-}
-
-.form__action-buttons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.5em;
-  position: absolute;
-  right: 0.5em;
-}
-
-.form__row {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 2em;
-}
-
-.form__divider {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 0.5em;
+.link{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
 }
