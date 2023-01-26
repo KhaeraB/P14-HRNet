@@ -1,71 +1,98 @@
-import { Table, Input, Spin, Empty, ConfigProvider} from 'antd';
-import FormItem from 'antd/es/form/FormItem';
+import { Table, Input, Spin, Empty, ConfigProvider } from 'antd'
+import FormItem from 'antd/es/form/FormItem'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { columns } from '../../config/ColumnsTableData'
-import { selectAllEmployees, useGetEmployeesQuery } from '../../features/employees/employeesApiSlice';
-import { Link } from "react-router-dom";
+import {
+  selectAllEmployees,
+  useGetEmployeesQuery,
+} from '../../features/employees/employeesApiSlice'
+import { Link } from 'react-router-dom'
 /**
  * Description Table Employees with Antd
  * @param {any} {ids}
  * @returns {Data : selectAllEmployees}
  */
 const TableEmployees = ({ ids }) => {
-    document.title = "Wealth Health - Employees List";
-    const [filterData, setFilterData] = useState(null);
-    const data= useSelector(state => selectAllEmployees(state, ids))
-    
-    const {
-        isLoading,
-      } = useGetEmployeesQuery();
+  document.title = 'Wealth Health - Employees List'
+  const [filterData, setFilterData] = useState(null)
+  const data = useSelector((state) => selectAllEmployees(state, ids))
 
-       
-        /**
-             * global search
-             */
-     
-        const onInputSearch = (value) => {
-            const filterEmployee = data.filter((employee) => Object.keys(employee).some((k) => String(employee[k])
-                .toLowerCase()
-                .includes(value.toLowerCase())));
-            setFilterData(filterEmployee);
-        };
-        return ( <>
-            <FormItem style={{display:'flex', justifyContent: 'flex-end', alignItems:'center', margin:'50px 15px 9px 25px'}}>
-                <Input.Search 
-                    placeholder="Search by..."
-                    allowClear
-                    style={{ width: 200}}
-                    onSearch ={onInputSearch}
-                    
-                />
-            </FormItem>
-                <ConfigProvider renderEmpty={() => isLoading ? <Spin style={{height:'1rem'}} size="large" tip="Be patient, datas are coming !"/>:<Empty description="An error occures with database" style={{fontSize:'20px', color:'red'}}/> } style={{height:'5rem'}}>
-                    <Table 
-                        columns={columns}
-                        rowKey={(employee) => employee.id}
-                        dataSource={filterData == null ? data : filterData} 
-                        size='middle' 
-                        pagination={{
-                            style:{margin:'47px 0'},
-                            defaultPageSize:10, 
-                            defaultCurrent:1,
-                            showSizeChanger:true,
-                            size: 'small',
-                            position: ['bottomCenter'],
-                            showTotal: (total, range) => (
-                                `Showing ${range[0]} to ${range[1]} of ${total} entries`
-                            )
-                        }} 
-                        scroll={{y: 500}} 
-                    >
-                    </Table>
-                </ConfigProvider> 
-                <div className='return'>
-               <button className='btn-home'> <Link className='link' to={"/"}>Home</Link></button>
-               </div>
-        </>
-        
-    );
+  const { isLoading } = useGetEmployeesQuery()
+
+  /**
+   * global search
+   */
+
+  const onInputSearch = (value) => {
+    const filterEmployee = data.filter((employee) =>
+      Object.keys(employee).some((k) =>
+        String(employee[k]).toLowerCase().includes(value.toLowerCase()),
+      ),
+    )
+    setFilterData(filterEmployee)
+  }
+  return (
+    <>
+      <FormItem
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          margin: '50px 15px 9px 25px',
+        }}
+      >
+        <Input.Search
+          placeholder="Search by..."
+          allowClear
+          style={{ width: 200 }}
+          onSearch={onInputSearch}
+        />
+      </FormItem>
+      <ConfigProvider
+        renderEmpty={() =>
+          isLoading ? (
+            <Spin
+              style={{ height: '1rem' }}
+              size="large"
+              tip="Be patient, datas are coming !"
+            />
+          ) : (
+            <Empty
+              description="An error occures with database"
+              style={{ fontSize: '20px', color: 'red' }}
+            />
+          )
+        }
+        style={{ height: '5rem' }}
+      >
+        <Table
+          columns={columns}
+          rowKey={(employee) => employee.id}
+          dataSource={filterData == null ? data : filterData}
+          size="middle"
+          pagination={{
+            style: { margin: '47px 0' },
+            defaultPageSize: 10,
+            defaultCurrent: 1,
+            showSizeChanger: true,
+            size: 'small',
+            position: ['bottomCenter'],
+            showTotal: (total, range) =>
+              `Showing ${range[0]} to ${range[1]} of ${total} entries`,
+          }}
+          scroll={{ y: 500 }}
+        ></Table>
+      </ConfigProvider>
+      <div className="return">
+        <button className="btn-home">
+          {' '}
+          <Link className="link" to={'/'}>
+            Home
+          </Link>
+        </button>
+      </div>
+    </>
+  )
 }
 export default TableEmployees
